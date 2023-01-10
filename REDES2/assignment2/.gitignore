@@ -1,0 +1,6 @@
+.vscode
+/__pycache__
+clavePrivada.bin
+clavePublica.bin
+token.txt
+token_xiao.txt

@@ -1,0 +1,7 @@
+/www
+*.a
+*.o
+/lib
+/obj
+*.pdf
+/.vscode
