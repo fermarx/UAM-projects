@@ -1,0 +1,133 @@
+COMMANDS:
+
+psql dvdrental -U alumnodb (contraseña alumnodb)
+\z
+\i
+\copy
+\q to exit
+select count(*)from film
+select * from film limit 10
+
+pgadmin3
+Name: Edat-01
+Host: localhost
+Username: alumnodb
+Password: alumnodb
+
+Servers
+	Edat-01
+		Databases
+			dvdrental
+				schemas
+					public
+						tables
+
+
+QUERIES:
+
+1. SELECT...FROM (SELECT...) as SEL1
+	WHERE a IN (SELECT...) as SEL2
+
+
+   SELECT...INTO 
+	TABLE tablename
+     FROM ...;
+
+
+   CREATE TABLE tablename
+     AS (SELECT...)
+
+
+   TABLE TEMPORARY TABLE
+	TEMP
+   VIEW (table that is always updated)
+
+
+   SELECT whatever into TABLE sel;
+
+
+2. query A: (SELECT costumer_id, count(*) as counter
+		FROM rental GROUP BY customer_id) (devuelve cuántas películas ha rentado cada costumer_id)
+	   	   ORDER BY count(*) DESC;
+			 (LIMIT 1) optional
+
+
+   query B: SELECT MAX (sel.counter) FROM A
+
+
+   query C: SELECT costumer_id, sel.counter
+		   FROM A
+		   WHERE sel.counter in B
+
+
+
+
+
+﻿SELECT film_max_language.NAME, Count(*) AS most_rented_movie 
+FROM (SELECT film_rental.NAME 
+	FROM   rental, 
+        (SELECT inventory_id, film_inventory.NAME 
+		FROM inventory,(SELECT film_id, film_name.NAME 
+				FROM film, (SELECT   language_id, NAME 
+						FROM language 
+						GROUP BY language_id) AS film_name 
+						WHERE film.language_id = film_name.language_id) AS film_inventory
+				WHERE inventory.film_id = film_inventory.film_id) AS film_rental 
+                WHERE  film_rental.inventory_id=rental.inventory_id) AS film_max_language 
+GROUP BY film_max_language.NAME 
+ORDER BY most_rented_movie DESC
+
+
+
+
+
+SELECT MAX(most_rented_movie)
+FROM(﻿SELECT film_max_language.NAME, Count(*) AS most_rented_movie 
+FROM (SELECT film_rental.NAME 
+	FROM   rental, 
+        (SELECT inventory_id, film_inventory.NAME 
+		FROM inventory,(SELECT film_id, film_name.NAME 
+				FROM film, (SELECT   language_id, NAME 
+						FROM language 
+						GROUP BY language_id) AS film_name 
+						WHERE film.language_id = film_name.language_id) AS film_inventory
+				WHERE inventory.film_id = film_inventory.film_id) AS film_rental 
+                WHERE  film_rental.inventory_id=rental.inventory_id) AS film_max_language 
+GROUP BY film_max_language.NAME 
+ORDER BY most_rented_movie DESC)
+
+
+
+
+SELECT * FROM (﻿SELECT film_max_language.NAME, Count(*) AS most_rented_movie 
+FROM (SELECT film_rental.NAME 
+	FROM   rental, 
+        (SELECT inventory_id, film_inventory.NAME 
+		FROM inventory,(SELECT film_id, film_name.NAME 
+				FROM film, (SELECT   language_id, NAME 
+						FROM language 
+						GROUP BY language_id) AS film_name 
+						WHERE film.language_id = film_name.language_id) AS film_inventory
+				WHERE inventory.film_id = film_inventory.film_id) AS film_rental 
+                WHERE  film_rental.inventory_id=rental.inventory_id) AS film_max_language 
+GROUP BY film_max_language.NAME 
+ORDER BY most_rented_movie DESC)
+
+WHERE most_rented_movie IN (SELECT MAX(most_rented_movie)
+FROM(﻿SELECT film_max_language.NAME, Count(*) AS most_rented_movie 
+FROM (SELECT film_rental.NAME 
+	FROM   rental, 
+        (SELECT inventory_id, film_inventory.NAME 
+		FROM inventory,(SELECT film_id, film_name.NAME 
+				FROM film, (SELECT   language_id, NAME 
+						FROM language 
+						GROUP BY language_id) AS film_name 
+						WHERE film.language_id = film_name.language_id) AS film_inventory
+				WHERE inventory.film_id = film_inventory.film_id) AS film_rental 
+                WHERE  film_rental.inventory_id=rental.inventory_id) AS film_max_language 
+GROUP BY film_max_language.NAME 
+ORDER BY most_rented_movie DESC))
+
+
+
+

@@ -1,0 +1,4 @@
+﻿CREATE TABLE worked_in (
+	staff_id integer NOT NULL REFERENCES staff(staff_id),
+	store_id integer NOT NULL REFERENCES store(store_id),
+	PRIMARY KEY (staff_id, store_id));
