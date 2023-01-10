@@ -1,0 +1,28 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>250</x><y>220</y><w>210</w><h>130</h></coordinates><panel_attributes>/Person/
+--
+- nickname: String
+- iDNumber: String
+- password: String
+--
++ changePassword()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>400</y><w>230</w><h>130</h></coordinates><panel_attributes>Administrator
+--
+- 
+--
+
+
++ acceptProject(projectID: int): boolean
+- setMinVotes(projectID: int): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>400</y><w>210</w><h>130</h></coordinates><panel_attributes>RegisteredUser
+--
+- accepted: boolean
+- ban: boolean
+- status: typeStatus
+--
++ acceptUser(): boolean
++ banUser(): String
++ unBan()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>390</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TypeStatus
+--
++ Online
++ Offline
++ Sleep
++ Occupied</panel_attributes><additional_attributes></additional_attributes></element></diagram>

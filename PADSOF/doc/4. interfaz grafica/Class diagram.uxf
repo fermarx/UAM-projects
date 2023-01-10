@@ -1,0 +1,332 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>1024</x><y>174</y><w>200</w><h>160</h></coordinates><panel_attributes>Notification
+--
+_- serialVersionUID: long_
+- title: String
+_- iD: String_
+- body: String
+- read: boolean
+- sentDate: LocalDate
+--
++ sendNotification()
++ sendNotification(goThrough: Boolean)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>784</x><y>374</y><w>300</w><h>310</h></coordinates><panel_attributes>User
+--
+_- serialVersionUID: long_
+_- MAX_IDNUM: int_
+- nickname: String
+- iDNumber: String
+- password: String
+- turnOnNotification: boolean
+- status: userPublicStatus
+- situation: userPrivateStatus
+- banReason: String
+--
++ joinUserGroup(group: Group)
++ leaveUserGroup(group: Group)
++ voteProjectUser(project: Project)
++ deleteNotification(notification: Notification)
++ update(g: Group)
++ update(p: Project)
++ ban()
++ unBan()
++ deleteUser()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1344</x><y>794</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ProjectStatus
+--
++ ADMITTED
++ REJECTED
++ PENDING
++ UNKNOWN</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1074</x><y>534</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+              publicStatus
+m1=1
+m2=0..*</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>584</x><y>784</y><w>220</w><h>280</h></coordinates><panel_attributes>Group
+--
+_- serialVersionUID: long_
+_- MAX_DESC: int_
+_- MAX_NAME: int_
+# name: String
+# level: long
+# father: Group
+# manager: User
+# description: String
+_# id: long_
+--
++ isMemeber(user: User): boolean
++ joinGroup(user: User): boolean
++ leaveGroup (user: User): boolean
++ voteProjectAsGroup(project: Project)
++ affinityReport(group: Group): double
++ update(u: User)
++ update(p: Project)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>834</x><y>1404</y><w>210</w><h>100</h></coordinates><panel_attributes>InfrastructurepProject
+--
+_- serialVersionUID: long_
+- district: String
+- picturePath: String
+--
++ sendExternalAssociation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>584</x><y>1094</y><w>230</w><h>100</h></coordinates><panel_attributes>Subgroup
+--
+_- serialVersionUID: long_
+--
++ joinSubgroup(user: User)
+- checkSubgroups(user: User): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>1054</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>484</x><y>844</y><w>120</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       subgroups
+m1=1
+m2= 0..*</panel_attributes><additional_attributes>100;10;10;10;10;290;100;290</additional_attributes></element><element><id>Relation</id><coordinates><x>694</x><y>674</y><w>250</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+
+membership                                                   
+m1=1..*
+m2=0..*</panel_attributes><additional_attributes>170;10;170;70;70;70;70;110</additional_attributes></element><element><id>Relation</id><coordinates><x>894</x><y>674</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+   individualVote
+m1=0..*
+m2=0..*</panel_attributes><additional_attributes>10;10;10;70;110;70;110;100</additional_attributes></element><element><id>Relation</id><coordinates><x>794</x><y>794</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+                       groupVote
+m1=0..*
+m2=0..*</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>954</x><y>774</y><w>280</w><h>550</h></coordinates><panel_attributes>/Project/
+--
+_- serialVersionUID: long_
+_- DAYS_TO_EXPIRE: int_
+_- INIT_NUM_VOTES: int_
+_- MAX_DESCRIPTION: int_
+_- MIN_MONEYREQU: int_
+_- MAX_MONEYREQU: int_
+# title: String
+# proponent: String
+_# iD: long_
+# externalID: String
+# description: String
+# minNumVotes: long
+# popularityReport: int
+# moneyRequested: double
+# moneyGranted: double
+# acceptanceDate: LocalDate
+# accepted: boolean
+# status: ProjectStatus
+# checkAdmin: boolean
+--
++ askForMoneyGranted()
++ voteUser(voter: User): boolean
++ voteGroup(voter: Group): boolean
++ isExpired(): boolean
++ checkNumberOfVotes(): boolean
+/+ sendExternalAssociation()/
++ deleteProject()
+# checkVotes(voter: User): boolean
+# checkVotes(voter: User, group: Group): boolean
++ unvoteProject(group: Group, user: User)
++ unvoteProject(grop: Group, user: User)
++ unvote()
++ vote()
++ update(u: User)
++ update(g: Group) </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>524</x><y>534</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+UserPrivateStatus
+--
++ ACCEPTED = 0
++ REJECTED = 1
++ PENDING = 2
++ BANNED = 3</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1224</x><y>834</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+              status
+m1=1
+m2=0..*</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1614</x><y>914</y><w>290</w><h>100</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+CCGG
+--
+
+--
++ submitRequest​(request: GrantRequest)
++ testIOException​(times: int, withException: boolean)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1434</x><y>1404</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Scope
+--
++ NATIONAL
++ INTERNATIONAL</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1324</x><y>1424</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+          scopes
+m1=1
+m2=0..*</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>934</x><y>1314</y><w>150</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;130;50;10;50;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1104</x><y>1314</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;120;50;120;90</additional_attributes></element><element><id>Relation</id><coordinates><x>804</x><y>1094</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+
+
+
+
+
+m1=0..*   subgroups
+m2=1</panel_attributes><additional_attributes>10;20;120;20;120;50;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>584</x><y>164</y><w>230</w><h>100</h></coordinates><panel_attributes>Administrator
+--
+_- serialVersionUID: long_
+- nickname: String
+- password: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>914</x><y>264</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+      notification
+
+
+
+
+
+
+
+
+m1=1..*
+m2=0..*</panel_attributes><additional_attributes>10;110;10;20;110;20</additional_attributes></element><element><id>Relation</id><coordinates><x>644</x><y>634</y><w>160</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+          groupUsers
+
+
+
+
+
+
+
+
+
+
+m1= 0..*
+m2=1..*</panel_attributes><additional_attributes>10;150;10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1074</x><y>644</y><w>200</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+individualVoters
+
+
+
+
+
+m1= 0..*
+m2=0..*</panel_attributes><additional_attributes>100;130;100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>794</x><y>854</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+groupVoters                   
+m1= 0..*
+m2=0..*</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1124</x><y>1404</y><w>210</w><h>100</h></coordinates><panel_attributes>SocialProject
+--
+_- serialVersionUID: long_
+- addressedTo: String
+- scope: Scope
+--
++ sendExternalAssociation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1234</x><y>494</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+UserPublicStatus
+--
++ ONLINE = 0
++ OFFLINE = 1
++ SLEEPING = 2
++ OCCUPIED = 3</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>634</x><y>584</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+privateStatus          
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>804</x><y>184</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+                            notifications
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>824</x><y>224</y><w>270</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+
+
+
+
+
+
+recipient                                                              
+m1=0..*
+m2=1..*</panel_attributes><additional_attributes>200;20;60;20;60;150</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>130</x><y>90</y><w>1440</w><h>1470</h></coordinates><panel_attributes>citicide</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1350</x><y>170</y><w>200</w><h>60</h></coordinates><panel_attributes>All the enumerations and classes
+implement the Serializable interface 
+except from the SendProject class</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>594</y><w>330</w><h>230</h></coordinates><panel_attributes>MySystem
+--
+_- serialVersionUID: long_
+_- INSTANCE: MySystem_
+- admin: Administrator
+- date: LocalDate
+- districts: ArrayList&lt;String&gt;
+--
++ update(u: User)
++ update(g: Group)
++ update(p: Project)
++ logIn(nickname: String, password: String): boolean
++ logInAdmin(nickname: String, password: String): boolean
++ logUp(name: String, iD: String, password: String): boolean
++ read()
++ write()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>454</y><w>480</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+                                                                                                                        users
+
+
+
+
+
+
+
+
+
+
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;140;10;20;460;20</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>714</y><w>180</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+
+
+                          groups
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;20;140;20;140;70</additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>814</y><w>650</w><h>460</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                       projects
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;10;430;630;430</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1644</x><y>1054</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+GrantRequest
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1284</x><y>1004</y><w>210</w><h>140</h></coordinates><panel_attributes>SendProject
+--
+- creationDate: LocalDate
+- extraData: String
+- projectDescription: String
+- projectKind: ProjectKind
+- projectTitle: String
+- requestedAmount: Double
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>1284</y><w>160</w><h>80</h></coordinates><panel_attributes>Serialization
+--
+_- serialVersionUID: long_
+--
+_+ serializationWrite()_
+_+ serializationRead()_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1490</x><y>1080</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1944</x><y>1054</y><w>100</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ProjectKind
+--
++ Infrastructure
++ Social
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1224</x><y>1064</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1844</x><y>1094</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>174</x><y>124</y><w>990</w><h>490</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+                                                                                                                        notifications
+
+
+
+
+
+
+
+
+
+
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;470;10;20;950;20;950;50</additional_attributes></element></diagram>

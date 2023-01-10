@@ -1,0 +1,152 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>518</x><y>48</y><w>230</w><h>160</h></coordinates><panel_attributes>Notification
+--
+- title: String
+- iD: String
+- body: String
+- read: boolean
+- sentDate: Date
+- turnOn: boolean
+--
++ sendNotification(user: User)
++ deleteNotification()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>278</x><y>248</y><w>210</w><h>130</h></coordinates><panel_attributes>User
+--
+- nickname: String
+- iDNumber: String
+- password: String
+- status: userPublicStatus
+- situation: userPrivateStatus
+--
+- updateUser()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>738</x><y>508</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ProjectStatus
+--
++ Admitted
++ Rejected
++ Pending
++ NA</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>478</x><y>288</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+              publicStatus
+m1=1
+m2=0..*</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>108</x><y>488</y><w>210</w><h>140</h></coordinates><panel_attributes>Group
+--
+- name: String
+- manager: String
+- description: String
+- numberUsers: int
+--
++ joinGroup(user: User)
++ leaveGroup(user: User)
+- updateGroup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>298</x><y>878</y><w>210</w><h>80</h></coordinates><panel_attributes>Infrastructure
+--
+- district: String
+- photo: Picture
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>108</x><y>668</y><w>210</w><h>70</h></coordinates><panel_attributes>Subgroup
+--
+- level: int
+--
++ checkSubgroups()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>618</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>28</x><y>548</y><w>100</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2= 0..*</panel_attributes><additional_attributes>80;10;10;10;10;170;80;170</additional_attributes></element><element><id>Relation</id><coordinates><x>278</x><y>368</y><w>120</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+membership
+m1=1..*
+m2=0..*</panel_attributes><additional_attributes>80;10;80;80;10;80;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>388</x><y>368</y><w>150</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+individualVote
+m1=0..*
+m2=0..*</panel_attributes><additional_attributes>10;10;10;80;110;80;110;110</additional_attributes></element><element><id>Relation</id><coordinates><x>308</x><y>498</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+groupVote
+m1=0..*
+m2=0..*</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>448</x><y>478</y><w>210</w><h>350</h></coordinates><panel_attributes>/Project/
+--
+- title: String
+- proponent: String
+- iD: String
+- externalID: String
+- description: String
+- minNumVotes: int
+- popularityReport: int
+- moneyRequested: double
+- moneyGranted: double
+- currency: Coin
+- creationDate: Date
+- accepted: boolean
+- status: projectStatus
+--
++ voteUser(voter: User)
++ voteGroup(voter: Group)
++ expired(): boolean
++ checkMinNumVotes(): boolean
++ sendExternalAssociation()
++ deleteProject()
+- checkVotes(voter: User): boolean
+- updateProject()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>18</x><y>238</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+UserPrivateStatus
+--
++ Accepted
++ Rejected
++ Pending
++ Banned</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>538</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+       status
+m1=1
+m2=0..*</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>738</x><y>638</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Coin
+--
++ Euro
++ Pound</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>658</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+        coins
+m1=1
+m2=0..*</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1038</x><y>748</y><w>210</w><h>70</h></coordinates><panel_attributes>ExternalAssociation
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>888</x><y>878</y><w>90</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Scope
+--
++ National
++ International</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>778</x><y>898</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+          scopes
+m1=1
+m2=0..*</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>388</x><y>818</y><w>150</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;130;30;10;30;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>558</x><y>818</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;120;30;120;60</additional_attributes></element><element><id>Relation</id><coordinates><x>308</x><y>668</y><w>130</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+
+
+
+
+
+m1=0..*   subgroups
+m2=1</panel_attributes><additional_attributes>10;20;110;20;110;50;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>78</x><y>38</y><w>230</w><h>80</h></coordinates><panel_attributes>Administrator
+--
+- nickname: String
+- password: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>148</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+notifications
+m1=1..*
+m2=0..*</panel_attributes><additional_attributes>10;100;10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>158</x><y>348</y><w>140</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+groupUsers
+m1= 0..*
+m2=1..*</panel_attributes><additional_attributes>10;140;10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>478</x><y>348</y><w>210</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+individualVoters
+m1= 0..*
+m2=0..*</panel_attributes><additional_attributes>110;130;110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>308</x><y>558</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+groupVoters
+m1= 0..*
+m2=0..*</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>578</x><y>878</y><w>210</w><h>80</h></coordinates><panel_attributes>Social
+--
+- addressedTo: String
+- scope: Scope
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>758</y><w>410</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;390;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>638</x><y>248</y><w>120</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+UserPublicStatus
+--
++ Online
++ Offline
++ Sleeping
++ Occupied</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>128</x><y>288</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+privateStatus
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>298</x><y>58</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+notifications
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>368</x><y>98</y><w>170</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+recipient
+m1=0..*
+m2=1..*</panel_attributes><additional_attributes>150;20;10;20;10;150</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>4</x><y>4</y><w>1010</w><h>970</h></coordinates><panel_attributes>Citicide</panel_attributes><additional_attributes></additional_attributes></element></diagram>

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"citicide"},{"l":"citicide.mvc"},{"l":"citicide.mvc.controller"},{"l":"citicide.mvc.view"},{"l":"citicide.mvc.view.administrator"},{"l":"citicide.tests"},{"l":"modifiableDates"}]
