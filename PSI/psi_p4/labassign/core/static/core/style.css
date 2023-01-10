@@ -1,0 +1,72 @@
+body {
+    background: #F0FFFF;
+}
+.text {
+    background: #F0FFFF;
+    font-family:Arial
+}
+
+.index ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.index li {
+  float: left;
+}
+
+.index li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #6495ED;
+}
+
+.index  li a:hover {
+  color: #000000;
+  background-color: #FFFAF0;
+}
+
+input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #E6E6FA;
+}
+
+input[type=password], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #E6E6FA;
+}
+
+input[type=submit] {
+  background-color: #5F9EA0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #5F9EA0;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #F0FFFF;
+  padding: 20px;
+}

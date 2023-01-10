@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Convalidation
+{% endblock %}
+
+{% block body_block %}
+        <h1>Convalidation Request Page</h1>
+        You must have at least a <b>{{ otherConstrains.minGradeTheoryConv }} in theory</b> and a <b>{{ otherConstrains.minGradeLabConv }} in the lab </b> to convalidate your grades <br/>
+	    {% if user.gradeTheoryLastYear >= otherConstrains.minGradeTheoryConv and user.gradeLabLastYear >= otherConstrains.minGradeLabConv %}
+            {% if pairs1 or pairs2 %}
+                You do not satify the requeriments for convalidation. You must leave your team partner before convalidating you grades<br>
+            {% else %}
+                Congratulations, your grades are theory=<b>{{ user.gradeTheoryLastYear }}</b> and lab=<b>{{ user.gradeLabLastYear }}</b>. You satisfy them.<br>
+            {% endif %}
+        {% else %}
+			Your grades, <b>theory={{ user.gradeTheoryLastYear }}</b> and <b>lab={{ user.gradeLabLastYear }}</b> do not satify the requeriments for convalidation<br>
+		{% endif %}
+{% endblock %}

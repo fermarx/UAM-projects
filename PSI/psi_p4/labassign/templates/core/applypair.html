@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Apply Pair
+{% endblock %}
+
+{% block body_block %}
+	<form method="post" action="{% url 'core:applypair' %}">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Submit" name="student2">
+	</form>
+
+	{% if form.errors %}
+      {% for field in form %}
+
+           {% for error in field.errors %}
+               Could not process your request
+           {% endfor %}
+
+      {% endfor %}
+    {% endif %}
+
+    {% if selectedPair == True %}
+        User has already selected a pair
+    {% endif %}
+
+{% endblock %}

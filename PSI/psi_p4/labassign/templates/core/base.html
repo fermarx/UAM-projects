@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+{% load staticfiles %}
+
+<html lang="en">
+    <head>
+        <title>
+            {% block title_block %}
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    </head>
+    <body class="text">
+        <div class="index">
+            <ul>
+                <li><a href="{% url 'core:home' %}">Home</a></li>
+                <li><a href="{% url 'core:login' %}">Log-In</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'core:logout' %}">Log-Out</a></li>
+                <li><a href="{% url 'core:convalidation' %}">Convalidation</a></li>
+                <li><a href="{% url 'core:applypair' %}">Apply Pair</a></li>
+                <li><a href="{% url 'core:breakpair' %}">Break Pair</a></li>
+                <li><a href="{% url 'core:applygroup' %}">Apply Group</a></li>
+            {% endif %}
+            </ul>
+        </div>
+
+        <hr />
+
+        <div>
+            {% block body_block %}
+            {% endblock %}
+        </div>
+        <br/>
+        <hr />
+
+        <div>
+            If you have any question please contact sofiax.fernandez@estudiante.uam.es
+        </div>
+
+    </body>
+</html>

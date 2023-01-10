@@ -1,0 +1,12 @@
+• What would happen if you don’t enter in a category name on the add category form?
+	If you do not enter a cateory name on the add category form when clicking "Add New Category" it says to you that you have to add a name to the field.
+
+• What happens when you try to add a category that already exists?
+	It does not allow you because the name has to be unique.
+
+• What happens when you visit a category that does not exist?
+	It says that the category does not exists and shows you a link to go back to the index.
+
+• In the section above where we implemented our ModelForm classes, we repeated the max_length values for fields that we had previously defined in the models chapter.
+This is bad practice as we are repeating ourselves! How can you refactor your code so that you are not repeating the max_length values?
+	We could pass as an argument the "max_length" field from the Category class to the CategoryForm class or make "max_length" visible to the class that inherit from the Category field.

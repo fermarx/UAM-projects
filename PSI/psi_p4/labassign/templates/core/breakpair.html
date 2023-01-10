@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Break Pair
+{% endblock %}
+
+{% block body_block %}
+	<form method="post" action="{% url 'core:breakpair' %}">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Submit" name="myPair">
+	</form>
+	{% if not error %}
+		Could not process your request
+	{% endif%}
+
+{% endblock %}

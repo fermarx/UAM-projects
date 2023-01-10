@@ -1,0 +1,20 @@
+(psi) eps@labvirteps:~/Desktop/Ing Inf III/PSI/psi_SXiaoFdez_p4/labassign$ coverage report -m -i
+Name                                         Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------
+core/__init__.py                                 0      0   100%
+core/admin.py                                    9      0   100%
+core/apps.py                                     3      3     0%   1-5
+core/forms.py                                   40      0   100%
+core/management/commands/populate.py           155      3    98%   42-58
+core/migrations/0001_initial.py                 10      0   100%
+core/migrations/0002_auto_20201208_1026.py       4      0   100%
+core/migrations/0003_auto_20201208_1027.py       4      0   100%
+core/migrations/0004_auto_20201208_1027.py       4      0   100%
+core/migrations/0005_auto_20201208_1029.py       4      0   100%
+core/migrations/__init__.py                      0      0   100%
+core/models.py                                  79      0   100%
+core/urls.py                                     4      0   100%
+core/views.py                                  137      9    93%   24-25, 35-36, 135-136, 293-296
+--------------------------------------------------------------------------
+TOTAL                                          453     15    97%
+

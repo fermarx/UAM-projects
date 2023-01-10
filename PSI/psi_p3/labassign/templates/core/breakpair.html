@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Break Pair
+{% endblock %}
+
+{% block body_block %}
+
+    Select the pair to be broken:
+    <form method="post" action="/breakpair/">
+        <p>
+            <select name="myPair" required id="id_myPair">
+                <option value="" selected>---------</option>
+                {% for pair in pairs %}
+                    <option value="{{ pair.id }}"> {{ pair }} </option>
+                {% endfor %}
+            </select>
+        </p>
+      <input type="submit" value="submit" name="pairid" />
+    </form>
+
+{% endblock %}

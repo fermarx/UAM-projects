@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+    <head>
+        <title>
+            {% block title_block %}
+            {% endblock %}
+        </title>
+    </head>
+    <body style="font-family:Arial">
+        <div>
+                <a href="{% url 'core:home' %}">Home</a>
+                <a href="{% url 'core:login' %}">Log-In</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'core:logout' %}">Log-Out</a>
+                <a href="{% url 'core:convalidation' %}">Convalidation</a>
+                <a href="{% url 'core:applypair' %}">Apply Pair</a>
+                <a href="{% url 'core:breakpair' %}">Break Pair</a><!--Quitar luego, solo para ver como van las parejas.-->
+                <a href="{% url 'core:applygroup' %}">Apply Group</a>
+            {% endif %}
+        </div>
+
+        <hr />
+
+        <div>
+            {% block body_block %}
+            {% endblock %}
+        </div>
+        <br/>
+        <hr />
+
+        <div>
+            If you have any question please contact sofiax.fernandez@estudiante.uam.es
+        </div>
+
+    </body>
+</html>

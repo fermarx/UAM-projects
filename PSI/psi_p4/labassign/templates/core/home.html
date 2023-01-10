@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Home
+{% endblock %}
+
+{% block body_block %}
+
+    {% if user.is_authenticated %}
+        <p> Summary page for <b>{{ user.first_name }} {{ user.last_name }}</b>, (your theory group is {{ user.theoryGroup.groupName }} )</p>
+        <h2>Convalidation</h2>
+        {% if user.convalidationGranted == False %}
+            Your lab assignments have NOT been or do not pass the requirements to be convalidated.<br/>
+            (If you wish to request a convalidation press the "convalidation" button.)
+        {% else %}
+            Your lab assignments have been convalidated.
+        {% endif%}
+
+        <h2>Pair Status</h2>
+        {% if pairs.student1.id == user.id or pairs2.student2.id == user.id  %}
+            {% if pairs2.validated == False %}
+                You have applied for a pair and your petition is being process.
+            {% else %}
+                {% if pairs.student1.id == user.id %}
+                    You have applied for a pair and your partner is <b>{{ pairs.student2.first_name }} {{ pairs.student2.last_name }}</b>
+                {% else %}
+                    You have applied for a pair and your partner is <b>{{ pairs2.student1.first_name }} {{ pairs2.student1.last_name }}</b>
+                {% endif %}
+            {% endif %}
+        {% else %}
+            You have <b>NOT</b> applied for a pair
+        {% endif%}
+
+        <h2>Selected Group</h2>
+        {% if user.labGroup != None %}
+            Your laboratory group is: <b>{{ user.labGroup.groupName }}</b>
+        {% else %}
+            You have <b>NOT</b> selected a laboratory group
+        {% endif%}
+    {% else %}
+		This web site allows EDAT students to select which laboratory group they wish to enroll in. Please follow the steps below<br/>
+		<ol>
+			<li>Login</li>
+			<li>Apply for convalidation if appropriate</li>
+			<li>Select partner</li>
+			<li>Select group</li>
+        </ol>
+    {% endif %}
+
+{% endblock %}
