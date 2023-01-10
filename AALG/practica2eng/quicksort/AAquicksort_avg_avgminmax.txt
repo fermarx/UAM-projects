@@ -1,0 +1,7 @@
+set xlabel "N"
+set ylabel "avg_ob, max_ob, min_ob"
+set title "avg_ob, max_ob, min_ob and N"
+set grid
+f(x)=a*x*log(x)+b*x+c
+fit f(x) 'AAAquicksort' using 1:2 via a,b,c
+plot "AAAquicksort" using 1:3 title "avg_ob", "AAAquicksort" using 1:4 title "max_ob", "AAAquicksort" using 1:5 title "min_ob", f(x) lc rgb "black" title "a*x*log(x)+b*x+c"

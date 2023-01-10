@@ -1,0 +1,8 @@
+set xlabel "N"
+set ylabel "Time"
+set title "Time and N"
+set grid
+f(x)=a*x*log(x)+b*x+c
+fit f(x) 'AAAquicksort' using 1:2 via a,b,c
+plot "AAAquicksort" using 1:2 title "Time", f(x) lc rgb "black" title "a*x*log(x)+b*x+c"
+

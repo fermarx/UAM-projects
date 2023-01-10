@@ -1,0 +1,3 @@
+./exercise2 -num_min 1000 -num_max 10000 -incr 100 -n_times 1 -outputFile lin_unif_notsorted
+
+./exercise2 -num_min 1000 -num_max 10000 -incr 100 -n_times 1 -outputFile bin_unif_sorted

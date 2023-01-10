@@ -1,0 +1,7 @@
+set ylabel "min ob"
+set xlabel "N"
+set title "min ob and N"
+set grid
+set key left top
+
+plot "bin_pot_sorted_1" using 1:5 title "bin ntimes = 1", "lin_auto_pot_notsorted_1"  using 1:5 title "linautobin = 1", "bin_pot_sorted_100"  using 1:5 title "bin ntimes = 100", "lin_auto_pot_notsorted_100"  using 1:5 title "linautobin = 100", "bin_pot_sorted_10000" using 1:5 title "bin ntimes = 10000", "lin_auto_pot_notsorted_10000" using 1:5 title "linauto ntimes = 10000"

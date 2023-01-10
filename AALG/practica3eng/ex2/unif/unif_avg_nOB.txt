@@ -1,0 +1,15 @@
+set ylabel "avg OB"
+set xlabel "N"
+set title "avg OB and N"
+set grid
+set yrange [0:5000]
+set key left top
+
+f(x) =a*log(x)+b
+g(x) = ((a*x)/2)+b
+
+fit f(x) "bin_unif_sorted" using 1:3 via a,b
+fit g(x) "lin_unif_notsorted" using 1:3 via a,b
+
+
+plot "bin_unif_sorted" using 1:3 title "avg OB bin", "lin_unif_notsorted" using 1:3 title "avg OB lin", f(x) lt rgb "black" title "a*log(x)+b", g(x) lt rgb "yellow" title "((a*x)/2)+b"

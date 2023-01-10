@@ -1,0 +1,340 @@
+
+
+*******************************************************************************
+Thu Nov 12 18:31:24 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        #datapoints = 200
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*log(x)+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 3.8149164682e+09   0.00e+00  2.21e+03    1.000000e+00   1.000000e+00   1.000000e+00
+   7 8.1298818266e-06  -2.40e-04  2.21e-04    2.063144e-07   3.117204e-07   3.898423e-05
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 8.12988e-06
+rel. change during last iteration : -2.39628e-09
+
+degrees of freedom    (FIT_NDF)                        : 197
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000203146
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.12684e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.06314e-07      +/- 1.483e-07    (71.88%)
+b               = 3.1172e-07       +/- 1.05e-06     (336.7%)
+c               = 3.89842e-05      +/- 5.683e-05    (145.8%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.999  1.000 
+c               0.863 -0.883  1.000 
+
+
+*******************************************************************************
+Thu Nov 12 18:40:24 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [-20.7156 : 979.284]
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x**2+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.5012721353e+00   0.00e+00  5.10e-02    2.063144e-07   3.117204e-07   3.898423e-05
+   6 7.9409212862e-06  -1.69e-05  5.10e-08    2.298998e-10   1.564143e-06   1.134935e-06
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 7.94092e-06
+rel. change during last iteration : -1.69024e-10
+
+degrees of freedom    (FIT_NDF)                        : 193
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000202841
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.11447e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.299e-10        +/- 2.024e-10    (88.04%)
+b               = 1.56414e-06      +/- 2.043e-07    (13.06%)
+c               = 1.13494e-06      +/- 4.32e-05     (3807%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.968  1.000 
+c               0.743 -0.865  1.000 
+
+
+*******************************************************************************
+Thu Nov 12 18:43:09 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [-20.7156 : 979.284]
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*log(x)+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 9.8052303543e-06   0.00e+00  5.10e-04    2.298998e-10   1.564143e-06   1.134935e-06
+   6 7.8596746317e-06  -6.77e-01  5.10e-10    2.757595e-07  -1.552509e-07   5.406903e-05
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 7.85967e-06
+rel. change during last iteration : -6.77252e-06
+
+degrees of freedom    (FIT_NDF)                        : 193
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000201801
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.07237e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.7576e-07       +/- 1.518e-07    (55.06%)
+b               = -1.55251e-07     +/- 1.072e-06    (690.2%)
+c               = 5.4069e-05       +/- 5.701e-05    (105.4%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.999  1.000 
+c               0.863 -0.883  1.000 
+
+
+*******************************************************************************
+Thu Nov 12 18:44:03 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [-20.7156 : 979.284]
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*log(x)+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 7.8596746317e-06   0.00e+00  5.93e-04    2.757595e-07  -1.552509e-07   5.406903e-05
+   1 7.8596746317e-06  -3.66e-10  5.93e-05    2.757595e-07  -1.552509e-07   5.406903e-05
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.85967e-06
+rel. change during last iteration : -3.66416e-15
+
+degrees of freedom    (FIT_NDF)                        : 193
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000201801
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.07237e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.7576e-07       +/- 1.518e-07    (55.06%)
+b               = -1.55251e-07     +/- 1.072e-06    (690.2%)
+c               = 5.4069e-05       +/- 5.701e-05    (105.4%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.999  1.000 
+c               0.863 -0.883  1.000 
+
+
+*******************************************************************************
+Thu Nov 12 18:45:46 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [-20.7156 : 979.284]
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*log(x)+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 7.8596746317e-06   0.00e+00  5.93e-04    2.757595e-07  -1.552509e-07   5.406903e-05
+   1 7.8596746317e-06  -2.80e-10  5.93e-05    2.757596e-07  -1.552509e-07   5.406903e-05
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.85967e-06
+rel. change during last iteration : -2.80201e-15
+
+degrees of freedom    (FIT_NDF)                        : 193
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000201801
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.07237e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.7576e-07       +/- 1.518e-07    (55.06%)
+b               = -1.55251e-07     +/- 1.072e-06    (690.2%)
+c               = 5.4069e-05       +/- 5.701e-05    (105.4%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.999  1.000 
+c               0.863 -0.883  1.000 
+
+
+*******************************************************************************
+Thu Nov 12 18:48:33 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:48:52 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:49:14 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:49:21 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:49:33 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:49:33 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:49:38 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:50:18 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:50:23 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:50:25 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:51:35 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:51:41 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 1.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Nov 12 18:51:52 2020
+
+
+FIT:    data read from 'AAAquicksort_nrt' using 1:2
+        format = x:z
+        #datapoints = 200
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*log(x)+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 3.8149164682e+09   0.00e+00  2.21e+03    1.000000e+00   1.000000e+00   1.000000e+00
+   7 8.1298818266e-06  -2.40e-04  2.21e-04    2.063144e-07   3.117204e-07   3.898423e-05
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 8.12988e-06
+rel. change during last iteration : -2.39628e-09
+
+degrees of freedom    (FIT_NDF)                        : 197
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000203146
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.12684e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.06314e-07      +/- 1.483e-07    (71.88%)
+b               = 3.1172e-07       +/- 1.05e-06     (336.7%)
+c               = 3.89842e-05      +/- 5.683e-05    (145.8%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.999  1.000 
+c               0.863 -0.883  1.000 

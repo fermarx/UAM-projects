@@ -1,0 +1,12 @@
+set xlabel "N"
+set ylabel "time OB"
+set title "time OB and N"
+set grid
+set yrange [0:0.0002]
+
+f(x)=a*log(x)+b
+g(x)=((a*x)/2)+b
+fit f(x) 'bin_unif_sorted' using 1:2 via a,b
+fit g(x) 'lin_unif_notsorted' using 1:2 via a,b
+
+plot "bin_unif_sorted" using 1:2 title "avg time binary", "lin_unif_notsorted" using 1:2 title "avg time linear", f(x) lc rgb "black" title "a*log(N)", g(x) lc rgb "yellow" title "((a*N)/2)+b"

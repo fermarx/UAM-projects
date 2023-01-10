@@ -1,0 +1,13 @@
+set xlabel "N"
+set ylabel "Time"
+set title "Time and N"
+set grid
+
+f(x)=a*x*log(x)+b*x+c
+g(x)=d*x*log(x)+e*x+f
+
+fit f(x) 'qs_perm' using 1:2 via a,b,c
+fit g(x) 'qs_perm_pot' using 1:2 via d,e,f
+plot "qs_perm" using 1:2 title "timePerm", f(x) lc rgb "black" title "a*x*log(x)+b*x+c", "qs_perm_pot" using 1:2 title "timePot", f(x) lc rgb "red" title "d*x*log(x)+e*x+f"
+
+

@@ -1,0 +1,7 @@
+set xlabel "N"
+set ylabel "Time"
+set title "Time and N"
+set grid
+f(x)=a*x**2+b*x+c
+fit f(x) 'AAAmergesort' using 1:2 via a,b,c
+plot "AAAmergesort" using 1:2 title "Time", f(x) lc rgb "black" title "a*x**2+b*x+c"
