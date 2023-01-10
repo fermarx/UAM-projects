@@ -1,0 +1,6 @@
+Next: OK
+Next: OK
+Back: OK
+Pick: OK
+Drop: OK
+Exit: OK

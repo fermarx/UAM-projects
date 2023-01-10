@@ -1,0 +1,13 @@
+<map id="game.c" name="game.c">
+<area shape="rect" id="node5" href="$game_8h.html" title="It defines the game&#39;s functions, commands implementation and game&#39;s structure. " alt="" coords="514,155,579,181"/>
+<area shape="rect" id="node7" href="$player_8h.html" title="It defines a Player. " alt="" coords="371,229,439,256"/>
+<area shape="rect" id="node8" href="$Object_8h.html" title="It defines an Object. " alt="" coords="190,304,261,331"/>
+<area shape="rect" id="node10" href="$space_8h.html" title="It defines a space. " alt="" coords="285,304,353,331"/>
+<area shape="rect" id="node11" href="$set_8h_source.html" title="set.h" alt="" coords="420,379,471,405"/>
+<area shape="rect" id="node14" href="$die_8h_source.html" title="die.h" alt="" coords="629,229,680,256"/>
+<area shape="rect" id="node15" href="$GameReader_8h_source.html" title="GameReader.h" alt="" coords="655,80,766,107"/>
+<area shape="rect" id="node6" href="$command_8h.html" title="It implements the command interpreter. " alt="" coords="515,229,605,256"/>
+<area shape="rect" id="node13" href="$inventory_8h.html" title="It defines which how many objects the player is going to have. " alt="" coords="377,304,463,331"/>
+<area shape="rect" id="node9" href="$types_8h.html" title="It defines common types. " alt="" coords="381,453,446,480"/>
+<area shape="rect" id="node12" href="$link_8h.html" title="It defines the link, which spaces it links, and whether it open or closed. " alt="" coords="292,379,345,405"/>
+</map>

@@ -1,0 +1,426 @@
+\hypertarget{link_8h}{}\section{link.\+h File Reference}
+\label{link_8h}\index{link.\+h@{link.\+h}}
+
+
+It defines the link, which spaces it links, and whether it open or closed.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for link.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{link_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{link_8h_abfa744c8ca5b46f7f2a10aea53a4ec59}\label{link_8h_abfa744c8ca5b46f7f2a10aea53a4ec59}} 
+\#define {\bfseries M\+A\+X\+\_\+\+L\+I\+NK}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Link}{\+\_\+\+Link} \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}
+\begin{DoxyCompactList}\small\item\em allocates Link struct with the fields\+: (Id, name, first connection id and second) and the state (able to connect with other or not) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}{link\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em allocates memory for the new link, sets the 2 id of the spaces linked and sets the state of the link to closed \end{DoxyCompactList}\item 
+void \hyperlink{link_8h_a81d66353edd4203d8fba2352060e064c}{link\+\_\+destroy} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em frees the memory of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a6ebee3816070a3b5f22daffb084ed84f}{link\+\_\+set\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em changes the name of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a87ce6298cddbf1d15d457eb6aca9c065}{link\+\_\+set\+\_\+first} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} first)
+\begin{DoxyCompactList}\small\item\em changes the first space of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a4490825635c93bba699d1b2166e0f625}{link\+\_\+set\+\_\+second} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} second)
+\begin{DoxyCompactList}\small\item\em changes the second space of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a5a729e2cb30923026100a5d93b25d873}{link\+\_\+set\+\_\+connect} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} first, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} second)
+\begin{DoxyCompactList}\small\item\em changes the both spaces ids of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_ac0a1ab71e26ad8b3448033a29e89504e}{link\+\_\+set\+\_\+state} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} state)
+\begin{DoxyCompactList}\small\item\em changes the state of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a63a4b94cc453ea2633a1559482679634}{link\+\_\+get\+\_\+id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em returns the id of a link \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{link_8h_a890e9fd3fbd6303690dbadc80cec3fab}{link\+\_\+get\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em returns the name of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a77fdf9a4aaba8a20e4305a06a34ebeb5}{link\+\_\+get\+\_\+first} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em returns the first space id of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_ae2e4f8a910bd56b637cfed2c65f6f6a4}{link\+\_\+get\+\_\+second} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em returns the second space id of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{link_8h_a5fd702a53bc421622e700bac8dab58ab}{link\+\_\+get\+\_\+state} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em returns the state of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a926a29421dc8c5763750c2ed152548a1}{link\+\_\+print} (F\+I\+LE $\ast$pf, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em prints the contents of a link \end{DoxyCompactList}\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8h_a898df23b89185e7fbc583e922fd4c07f}{link\+\_\+copy} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$lk)
+\begin{DoxyCompactList}\small\item\em returns a copy of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_ac866511e3c590d867a63449097a12e9a}{link\+\_\+get\+\_\+connection} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} s, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$l)
+\begin{DoxyCompactList}\small\item\em returns the connectionof the link in a space(given its id) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the link, which spaces it links, and whether it open or closed. 
+
+\begin{DoxyAuthor}{Author}
+S. Carlos Garcia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{link_8h_ae3b299941e67be6971bfd64a25505eff}\label{link_8h_ae3b299941e67be6971bfd64a25505eff}} 
+\index{link.\+h@{link.\+h}!Link@{Link}}
+\index{Link@{Link}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{Link}{Link}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Link}{\+\_\+\+Link} \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}}
+
+
+
+allocates Link struct with the fields\+: (Id, name, first connection id and second) and the state (able to connect with other or not) 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id,first,second} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Link$\ast$ \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{link_8h_a898df23b89185e7fbc583e922fd4c07f}\label{link_8h_a898df23b89185e7fbc583e922fd4c07f}} 
+\index{link.\+h@{link.\+h}!link\+\_\+copy@{link\+\_\+copy}}
+\index{link\+\_\+copy@{link\+\_\+copy}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+copy()}{link\_copy()}}
+{\footnotesize\ttfamily \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}$\ast$ link\+\_\+copy (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+returns a copy of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status \+: 28-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}\label{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}} 
+\index{link.\+h@{link.\+h}!link\+\_\+create@{link\+\_\+create}}
+\index{link\+\_\+create@{link\+\_\+create}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+create()}{link\_create()}}
+{\footnotesize\ttfamily \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}$\ast$ link\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+allocates memory for the new link, sets the 2 id of the spaces linked and sets the state of the link to closed 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id,first,second} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Link$\ast$ \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a81d66353edd4203d8fba2352060e064c}\label{link_8h_a81d66353edd4203d8fba2352060e064c}} 
+\index{link.\+h@{link.\+h}!link\+\_\+destroy@{link\+\_\+destroy}}
+\index{link\+\_\+destroy@{link\+\_\+destroy}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+destroy()}{link\_destroy()}}
+{\footnotesize\ttfamily void link\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+frees the memory of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_ac866511e3c590d867a63449097a12e9a}\label{link_8h_ac866511e3c590d867a63449097a12e9a}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+connection@{link\+\_\+get\+\_\+connection}}
+\index{link\+\_\+get\+\_\+connection@{link\+\_\+get\+\_\+connection}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+connection()}{link\_get\_connection()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+connection (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{s,  }\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+returns the connectionof the link in a space(given its id) 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Id,Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id \+: 30-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a77fdf9a4aaba8a20e4305a06a34ebeb5}\label{link_8h_a77fdf9a4aaba8a20e4305a06a34ebeb5}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+first@{link\+\_\+get\+\_\+first}}
+\index{link\+\_\+get\+\_\+first@{link\+\_\+get\+\_\+first}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+first()}{link\_get\_first()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+first (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+returns the first space id of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a63a4b94cc453ea2633a1559482679634}\label{link_8h_a63a4b94cc453ea2633a1559482679634}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}}
+\index{link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+id()}{link\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+returns the id of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a890e9fd3fbd6303690dbadc80cec3fab}\label{link_8h_a890e9fd3fbd6303690dbadc80cec3fab}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}}
+\index{link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+name()}{link\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ link\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+returns the name of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_ae2e4f8a910bd56b637cfed2c65f6f6a4}\label{link_8h_ae2e4f8a910bd56b637cfed2c65f6f6a4}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+second@{link\+\_\+get\+\_\+second}}
+\index{link\+\_\+get\+\_\+second@{link\+\_\+get\+\_\+second}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+second()}{link\_get\_second()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+second (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+returns the second space id of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a5fd702a53bc421622e700bac8dab58ab}\label{link_8h_a5fd702a53bc421622e700bac8dab58ab}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+state@{link\+\_\+get\+\_\+state}}
+\index{link\+\_\+get\+\_\+state@{link\+\_\+get\+\_\+state}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+state()}{link\_get\_state()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} link\+\_\+get\+\_\+state (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+returns the state of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a926a29421dc8c5763750c2ed152548a1}\label{link_8h_a926a29421dc8c5763750c2ed152548a1}} 
+\index{link.\+h@{link.\+h}!link\+\_\+print@{link\+\_\+print}}
+\index{link\+\_\+print@{link\+\_\+print}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+print()}{link\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{pf,  }\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk }\end{DoxyParamCaption})}
+
+
+
+prints the contents of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a5a729e2cb30923026100a5d93b25d873}\label{link_8h_a5a729e2cb30923026100a5d93b25d873}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+connect@{link\+\_\+set\+\_\+connect}}
+\index{link\+\_\+set\+\_\+connect@{link\+\_\+set\+\_\+connect}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+connect()}{link\_set\_connect()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+connect (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{first,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{second }\end{DoxyParamCaption})}
+
+
+
+changes the both spaces ids of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$,id,id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a87ce6298cddbf1d15d457eb6aca9c065}\label{link_8h_a87ce6298cddbf1d15d457eb6aca9c065}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+first@{link\+\_\+set\+\_\+first}}
+\index{link\+\_\+set\+\_\+first@{link\+\_\+set\+\_\+first}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+first()}{link\_set\_first()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+first (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{first }\end{DoxyParamCaption})}
+
+
+
+changes the first space of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$,id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a6ebee3816070a3b5f22daffb084ed84f}\label{link_8h_a6ebee3816070a3b5f22daffb084ed84f}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}}
+\index{link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+name()}{link\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+changes the name of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$,name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a4490825635c93bba699d1b2166e0f625}\label{link_8h_a4490825635c93bba699d1b2166e0f625}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+second@{link\+\_\+set\+\_\+second}}
+\index{link\+\_\+set\+\_\+second@{link\+\_\+set\+\_\+second}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+second()}{link\_set\_second()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+second (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{second }\end{DoxyParamCaption})}
+
+
+
+changes the second space of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$,id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status \+: 20-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_ac0a1ab71e26ad8b3448033a29e89504e}\label{link_8h_ac0a1ab71e26ad8b3448033a29e89504e}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+state@{link\+\_\+set\+\_\+state}}
+\index{link\+\_\+set\+\_\+state@{link\+\_\+set\+\_\+state}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+state()}{link\_set\_state()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+state (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{lk,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{state }\end{DoxyParamCaption})}
+
+
+
+changes the state of a link 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Link$\ast$,bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status \+: 20-\/03-\/2019 
+\end{DoxyReturn}

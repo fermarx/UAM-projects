@@ -1,0 +1,108 @@
+#p:1|10
+#o:12|Trx2|6|You can't move this torch.|Torch|1|-1|0|0|0|1|
+#o:14|Trx4|8|You can't move this torch.|Torch|1|-1|0|0|0|1|
+#o:11|Trx1|10|This torch is attached at the wall.|Torch|1|-1|0|0|0|1|
+#o:13|Trx3|12|Seems like you can not move this torch, It's too heavy.|Torch|1|-1|0|0|0|1|
+#o:15|Trx5|14|This torch is attached at the wall.|Torch|1|-1|0|0|0|1|
+#o:1|Key1|15|An old key that can open a secret door.|This key will help you later|0|17|1|0|0|0|
+#o:5|Note|16|You're almost next to the 2nd floor exit!|Keep going|0|-1|1|0|0|0|
+#o:20|Chdl|17|Chandelier. maybe you can cast a fire with it and illuminate|Be careful and try not to burn yourself!!!!|1|-1|1|0|0|1|
+#o:16|Trx6|19|This torch is attached at the wall.|Torch|1|-1|0|0|0|1|
+#o:17|Trx7|20|Seems like you can not move this torch, It's too heavy.|Torch|1|-1|0|0|0|1|
+#o:2|Key2|22|This key will help you to open a hatch.|Keep this key until you have found the exit to the 1st floor.|0|40|1|0|0|0|
+#o:6|Text|22|GOOD, NOW YOU HAVE TO FIND SOMETHING TO USE THIS KEY|READ ME|0|-1|1|0|0|0|
+#o:18|Trx8|23|This torch is attached at the wall.|Torch|1|-1|0|0|0|1|
+#o:7|Copy|25|Seems like you are a bit lost|Read me|0|-1|1|0|0|0|
+#o:8|Tome|31|GREAT YOU ARE IN THE FIRST FLOOR|KEEP GOING|0|-1|1|0|0|0|
+#o:19|Trx9|31|Seems like you can not move this torch, It's too heavy.|Torch|1|-1|0|0|0|1|
+#o:9|List|32|Maybe you need a chandelier to feep going. I saw one in the 2nd floor.|STOP|0|-1|1|0|0|0|
+#o:3|Key3|33|This key opens a big door.|You will need this key later.|0|37|1|0|0|0|
+#o:10|Page|41|GREAT you found the way out|Read me|0|-1|1|0|0|0|
+
+#o:4|Book|-1|Welcome to the gratest maze, you will need to get out of here as fast as you can.|Some structions|0|-1|1|0|0|0|
+
+#s:1|F2R1|-1|1|4|-1|-1|-1|Nothing special about this room|E, S|1
+#s:2|F2R2|-1|2|-1|1|-1|-1|Nothing special about this room|E, W|1
+#s:3|F2R3|-1|3|5|2|-1|-1|-1|Nothing special about this room|0
+#s:4|F2R4|-1|-1|-1|3|-1|-1|Nothing special about this room|W|1
+#s:5|F2R5 (start)|-1|-1|6|-1|-1|-1|This is the room you start in, you can only move in one direction|S|0&\     /& \ o / &   0   &
+#s:6|F2R6|4|-1|8|-1|-1|-1|Nothing special about this room|N, S|1
+#s:7|F2R7 (hatch)|-1|-1|9|-1|-1|40|There is a hatch in this room. You need a key to open it|GOOD JOB (S)|1&______ &| O O |&______ &
+#s:8|F2R8|5|-1|10|-1|-1|-1|Nothing special about this room|N, S|1
+#s:9|F2R9|-1|7|11|-1|-1|-1|Nothing special about this room|E, S|1
+#s:10|F2R10|6|-1|-1|7|-1|-1|Nothing special about this room|N, W|1
+#s:11|F2R11|8|12|14|-1|-1|-1|Nothing special about this room|N, E, S|1
+#s:12|F2R12|9|-1|-1|12|-1|-1|Nothing special about this room|YOU ALMOST HAVE IT (N, W)|1
+#s:13|F2R13|10|-1|15|-1|-1|-1|Nothing special about this room|N, S|1
+#s:14|F2R14|11|13|16|-1|-1|-1|If you keep going east you will find a special key|WATCH OUT (N, E, S)|1
+#s:15|F2R15|-1|-1|-1|13|-1|-1|If you look close you can find a key to open a secret room|W|1
+#s:16|F2R16|14|-1|19|-1|-1|-1|Nothing special about this room|N, S|1
+#s:17|F2R17|-1|17|-1|-1|-1|-1|Nothing special about this room|E|1
+#s:18|F2R18|15|-1|20|17|-1|-1|Maybe it's a good idea to try to open the west door. It can have special items|WATCH OUT (N, S, W)|1
+#s:19|F2R19|16|18|21|-1|-1|-1|Nothing special about this room|N, E, S|1
+#s:20|F2R20|-1|-1|22|18|-1|-1|Nothing special about this room|S, W|1
+#s:21|F2R21|19|23|-1|-1|-1|-1|Nothing special about this room|N, E|1
+#s:22|F2R22|-1|-1|-1|23|-1|-1|If you look close you can find a key to open some weird hatch|W|1
+#s:23|F2R23|20|24|-1|-1|-1|-1|Nothing special about this room|N, E|1
+#s:24|F2R24|21|-1|-1|24|-1|-1|Nothing special about this room|N, W|1
+#s:25|F2R25|22|-1|-1|-1|-1|-1|Nothing special about this room|N|1
+#s:26|F1R1|-1|25|28|-1|-1|-1|Nothing special about this room|E, S|1
+#s:27|F1R2|-1|26|-1|25|-1|-1|Nothing special about this room|E, W|1
+#s:28|F1R3|-1|27|29|26|-1|-1|Nothing special about this room|E, S, W|0
+#s:29|F1R4|-1|-1|30|27|-1|-1|Nothing special about this room|N, E, S, W|0
+#s:30|F1R5|28|-1|32|-1|-1|-1|Nothing special about this room|N, S|0
+#s:31|F1R6 (hatch)|-1|31|-1|-1|40|-1|WOW where are you now? Seems like you will need something to light up the path|Starter Room (E)|1&______ &| O O |&______ &
+#s:32|F1R7|29|-1|-1|31|-1|-1|Nothing special about this room|N, W|0
+#s:33|F1R8|30|-1|-1|-1|-1|-1|Nothing special about this room|N|0
+#s:34|F1R9|32|33|-1|-1|-1|-1|Nothing special about this room|N, E|0
+#s:35|F1R10|-1|34|-1|33|-1|-1|Nothing special about this room|E, W|0
+#s:36|F1R11|-1|35|36|34|-1|-1|Nothing special about this room|E, S, W|0
+#s:37|F1R12|-1|-1|37|35|-1|-1|You will need a key if you want keep going south.|YOU'RE REALLY CLOSE (S, W)|0
+#s:38|F1R13|-1|38|-1|-1|-1|-1|Seems like you are stuck here. Better to turn back|YOU ARE STUCK (E)|0
+#s:39|F1R14|-1|39|-1|38|-1|-1|Nothing special about this room|E, W|0
+#s:40|F1R15|36|-1|-1|39|-1|-1|Nothing special about this room|N, W|0
+#s:41|F1R16|37|-1|-1|-1|-1|41|CONGRATULATIONS! you found the exit|EXIT|0
+#s:42|F0R1|-1|-1|-1|-1|41|-1|Reload if you want to play again|YOU ARE AT THE END OF THE MAZE.|1
+
+#l:1|L1|1|2|1
+#l:2|L2|2|3|1
+#l:3|L3|3|4|1
+#l:4|L4|1|6|1
+#l:5|L5|3|8|1
+#l:6|L6|5|10|1
+#l:7|L7|9|10|1
+#l:8|L8|6|11|1
+#l:9|L9|7|12|1
+#l:10|L10|8|13|1
+#l:11|L11|9|14|1
+#l:12|L12|11|12|1
+#l:13|L13|14|15|1
+#l:14|L14|11|16|1
+#l:15|L15|13|18|1
+#l:16|L16|14|19|1
+#l:17|Chandelier|17|18|0
+#l:18|L18|19|20|1
+#l:19|L19|16|21|1
+#l:20|L20|18|23|1
+#l:21|L21|19|24|1
+#l:22|L22|20|25|1
+#l:23|L23|21|22|1
+#l:24|L24|23|24|1
+#l:25|L25|26|27|1
+#l:26|L26|27|28|1
+#l:27|L27|28|29|1
+#l:28|L28|26|30|1
+#l:29|L29|28|32|1
+#l:30|L30|29|33|1
+#l:31|L31|31|32|1
+#l:32|L32|30|34|1
+#l:33|L33|34|35|1
+#l:34|L34|35|36|1
+#l:35|L35|36|37|1
+#l:36|L36|36|40|1
+#l:37|Exit|37|41|0
+#l:38|L38|38|39|1
+#l:39|L39|39|40|1
+#l:40|Hatch|7|31|0
+#l:41|Out|41|42|1
+

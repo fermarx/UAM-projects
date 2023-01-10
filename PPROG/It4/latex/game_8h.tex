@@ -1,0 +1,194 @@
+\hypertarget{game_8h}{}\section{game.\+h File Reference}
+\label{game_8h}\index{game.\+h@{game.\+h}}
+
+
+It defines the game\textquotesingle{}s functions, commands implementation and game\textquotesingle{}s structure.  
+
+
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8h_acdc7844fbd4d45737d4aa56834d37829}\label{game_8h_acdc7844fbd4d45737d4aa56834d37829}} 
+\#define {\bfseries M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}~40
+\item 
+\mbox{\Hypertarget{game_8h_a2b9d4cb1200ff8c085b0a4902e0d7229}\label{game_8h_a2b9d4cb1200ff8c085b0a4902e0d7229}} 
+\#define {\bfseries M\+A\+X\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}~100
+\item 
+\mbox{\Hypertarget{game_8h_ac67bab3cc03f1199a363bfbc5ad61b87}\label{game_8h_ac67bab3cc03f1199a363bfbc5ad61b87}} 
+\#define {\bfseries M\+A\+X\+\_\+\+I\+L\+L\+U\+M\+I\+N\+A\+T\+I\+ON}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}\label{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}} 
+typedef struct \hyperlink{struct__Game}{\+\_\+\+Game} {\bfseries Game}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8h_a80fec1508954d0f551e7f43131af5e3e}\label{game_8h_a80fec1508954d0f551e7f43131af5e3e}} 
+struct \hyperlink{struct__Game}{Game} $\ast$ {\bfseries game\+\_\+ini} ()
+\item 
+\mbox{\Hypertarget{game_8h_ae5ad86de0a92d9eccb234948458da7f1}\label{game_8h_ae5ad86de0a92d9eccb234948458da7f1}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+add\+\_\+space} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\item 
+\mbox{\Hypertarget{game_8h_a4691bee17d5784ad6eb257dfbb252c27}\label{game_8h_a4691bee17d5784ad6eb257dfbb252c27}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+add\+\_\+link} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\item 
+\mbox{\Hypertarget{game_8h_a4280b7ee7ac0d4575d0aa88e8b7f921b}\label{game_8h_a4280b7ee7ac0d4575d0aa88e8b7f921b}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+add\+\_\+player} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\mbox{\Hypertarget{game_8h_a3b68115cab4ce61a1418e2445c0ee97b}\label{game_8h_a3b68115cab4ce61a1418e2445c0ee97b}} 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries game\+\_\+get\+\_\+link\+\_\+from\+\_\+id} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\hyperlink{struct__Game}{Game} $\ast$ \hyperlink{game_8h_a1cdbe3f06b9bf49eb5e334a22ad3b2b9}{game\+\_\+create} ()
+\item 
+\mbox{\Hypertarget{game_8h_a0e225eaf98598147fdfba6fed2ea8f02}\label{game_8h_a0e225eaf98598147fdfba6fed2ea8f02}} 
+\hyperlink{struct__Game}{Game} $\ast$ {\bfseries game\+\_\+create\+\_\+from\+\_\+file} (char $\ast$filename)
+\item 
+\mbox{\Hypertarget{game_8h_a005b4f436300333e7fff8fba2027337e}\label{game_8h_a005b4f436300333e7fff8fba2027337e}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+update} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} cmd)
+\item 
+\mbox{\Hypertarget{game_8h_a0736924a1235c0e6fe9b6d91c2a12af8}\label{game_8h_a0736924a1235c0e6fe9b6d91c2a12af8}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+destroy} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\mbox{\Hypertarget{game_8h_aa6efe0650af110bbd84e742cc8046d93}\label{game_8h_aa6efe0650af110bbd84e742cc8046d93}} 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} {\bfseries game\+\_\+is\+\_\+over} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\mbox{\Hypertarget{game_8h_a33a5ed8937423f8c012df3cedad4fa4c}\label{game_8h_a33a5ed8937423f8c012df3cedad4fa4c}} 
+void {\bfseries game\+\_\+print\+\_\+data} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\mbox{\Hypertarget{game_8h_a69d94da9d27b542d3ebdeb8b60f1f2dc}\label{game_8h_a69d94da9d27b542d3ebdeb8b60f1f2dc}} 
+\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries game\+\_\+get\+\_\+space} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\mbox{\Hypertarget{game_8h_aab5007622f01ac5cf3e57e9346e0e447}\label{game_8h_aab5007622f01ac5cf3e57e9346e0e447}} 
+int {\bfseries game\+\_\+get\+\_\+max\+\_\+objects} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_ac6a628f2106f81c37d0e83c67920615f}{game\+\_\+get\+\_\+player\+\_\+location} (\hyperlink{struct__Game}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Getter of the player location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_a6f493abc8fbf86937be81ce49eac6195}\label{game_8h_a6f493abc8fbf86937be81ce49eac6195}} 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries game\+\_\+get\+\_\+object\+\_\+location} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id\+\_\+object)
+\item 
+\mbox{\Hypertarget{game_8h_a8bd6afad9720af464b0fd52aca7a25fd}\label{game_8h_a8bd6afad9720af464b0fd52aca7a25fd}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+get\+\_\+status} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\mbox{\Hypertarget{game_8h_aa15d9daf38a759e19f46bb5b2d4b325a}\label{game_8h_aa15d9daf38a759e19f46bb5b2d4b325a}} 
+\hyperlink{struct__Object}{Object} $\ast$ {\bfseries game\+\_\+get\+\_\+object} (\hyperlink{struct__Game}{Game} $\ast$game, int var)
+\item 
+\mbox{\Hypertarget{game_8h_af46efd507d797aec6da90d08aa592e32}\label{game_8h_af46efd507d797aec6da90d08aa592e32}} 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ {\bfseries game\+\_\+get\+\_\+player} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\mbox{\Hypertarget{game_8h_ac35df1afdade2b7659ebbcfeca1f0c35}\label{game_8h_ac35df1afdade2b7659ebbcfeca1f0c35}} 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} {\bfseries game\+\_\+get\+\_\+last\+\_\+command} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\hyperlink{struct__Object}{Object} $\ast$ \hyperlink{game_8h_a631bdd879a48b7da66a7f0a1fcc6716d}{game\+\_\+get\+\_\+object\+\_\+from\+\_\+id} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the object\textquotesingle{}s id and stores it in the game\textquotesingle{}s struct. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_ae8c52687d9d0b4ecd135818d8efa5411}\label{game_8h_ae8c52687d9d0b4ecd135818d8efa5411}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+set\+\_\+object\+\_\+location} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id\+\_\+space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id\+\_\+object)
+\item 
+\mbox{\Hypertarget{game_8h_a9597a8e456aa74db536e87d56f56c3b4}\label{game_8h_a9597a8e456aa74db536e87d56f56c3b4}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+add\+\_\+object} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{struct__Object}{Object} $\ast$object)
+\item 
+\mbox{\Hypertarget{game_8h_ad38faa7e1bd505f0580a5ade1a7c05d8}\label{game_8h_ad38faa7e1bd505f0580a5ade1a7c05d8}} 
+char $\ast$ {\bfseries game\+\_\+get\+\_\+description} (\hyperlink{struct__Game}{Game} $\ast$game)
+\item 
+\mbox{\Hypertarget{game_8h_a4988faeabcbd1f3533cd2fe7421e9b30}\label{game_8h_a4988faeabcbd1f3533cd2fe7421e9b30}} 
+\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ {\bfseries game\+\_\+get\+\_\+space\+\_\+by\+\_\+position} (\hyperlink{struct__Game}{Game} $\ast$game, int position)
+\item 
+\mbox{\Hypertarget{game_8h_af91fd009b89e7cdacf1027353bfcfd19}\label{game_8h_af91fd009b89e7cdacf1027353bfcfd19}} 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ {\bfseries game\+\_\+get\+\_\+link\+\_\+by\+\_\+position} (\hyperlink{struct__Game}{Game} $\ast$game, int position)
+\item 
+\mbox{\Hypertarget{game_8h_a492ca9fb594442dc43fc7d18a3820426}\label{game_8h_a492ca9fb594442dc43fc7d18a3820426}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+set\+\_\+player\+\_\+location} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\mbox{\Hypertarget{game_8h_a3933fa5491bd2f1dc61b14108b3373f0}\label{game_8h_a3933fa5491bd2f1dc61b14108b3373f0}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries game\+\_\+set\+\_\+player\+\_\+object} (\hyperlink{struct__Game}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the game\textquotesingle{}s functions, commands implementation and game\textquotesingle{}s structure. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/01-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_a1cdbe3f06b9bf49eb5e334a22ad3b2b9}\label{game_8h_a1cdbe3f06b9bf49eb5e334a22ad3b2b9}} 
+\index{game.\+h@{game.\+h}!game\+\_\+create@{game\+\_\+create}}
+\index{game\+\_\+create@{game\+\_\+create}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+create()}{game\_create()}}
+{\footnotesize\ttfamily \hyperlink{struct__Game}{Game}$\ast$ game\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Game interface implementation \mbox{\Hypertarget{game_8h_a631bdd879a48b7da66a7f0a1fcc6716d}\label{game_8h_a631bdd879a48b7da66a7f0a1fcc6716d}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+object\+\_\+from\+\_\+id@{game\+\_\+get\+\_\+object\+\_\+from\+\_\+id}}
+\index{game\+\_\+get\+\_\+object\+\_\+from\+\_\+id@{game\+\_\+get\+\_\+object\+\_\+from\+\_\+id}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+object\+\_\+from\+\_\+id()}{game\_get\_object\_from\_id()}}
+{\footnotesize\ttfamily \hyperlink{struct__Object}{Object}$\ast$ game\+\_\+get\+\_\+object\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{struct__Game}{Game} $\ast$}]{game,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{object\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the object\textquotesingle{}s id and stores it in the game\textquotesingle{}s struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game,object\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+modified by Rodrigo Juez 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+Object$\ast$ Date\+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ac6a628f2106f81c37d0e83c67920615f}\label{game_8h_ac6a628f2106f81c37d0e83c67920615f}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+player\+\_\+location@{game\+\_\+get\+\_\+player\+\_\+location}}
+\index{game\+\_\+get\+\_\+player\+\_\+location@{game\+\_\+get\+\_\+player\+\_\+location}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+player\+\_\+location()}{game\_get\_player\_location()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+player\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{struct__Game}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Getter of the player location. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id Date\+: 13-\/03-\/2019 
+\end{DoxyReturn}

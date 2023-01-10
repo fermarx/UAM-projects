@@ -1,0 +1,26 @@
+\hypertarget{struct__Player}{}\section{\+\_\+\+Player Struct Reference}
+\label{struct__Player}\index{\+\_\+\+Player@{\+\_\+\+Player}}
+
+
+Collaboration diagram for \+\_\+\+Player\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct__Player_a60d635cd063816a9c1bd873f4868bb90}\label{struct__Player_a60d635cd063816a9c1bd873f4868bb90}} 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries id}
+\item 
+\mbox{\Hypertarget{struct__Player_ac89715f913cc607b75eb7236765c41f5}\label{struct__Player_ac89715f913cc607b75eb7236765c41f5}} 
+char {\bfseries name} \mbox{[}W\+O\+R\+D\+\_\+\+S\+I\+ZE+1\mbox{]}
+\item 
+\mbox{\Hypertarget{struct__Player_a5e02924cb82ca61f74ba414d190aa29b}\label{struct__Player_a5e02924cb82ca61f74ba414d190aa29b}} 
+\hyperlink{struct__Inventory}{Inventory} $\ast$ {\bfseries inventory}
+\item 
+\mbox{\Hypertarget{struct__Player_aada8d7c35cffc55491f24f42d7991b14}\label{struct__Player_aada8d7c35cffc55491f24f42d7991b14}} 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} {\bfseries space}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+player.\+c\end{DoxyCompactItemize}

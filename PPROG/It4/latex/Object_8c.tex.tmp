@@ -1,0 +1,624 @@
+\hypertarget{Object_8c}{}\section{Object.\+c File Reference}
+\label{Object_8c}\index{Object.\+c@{Object.\+c}}
+
+
+It implements the object interface and all the function to manage it.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Object.\+h\char`\"{}}\newline
+Include dependency graph for Object.\+c\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Object}{\+\_\+\+Object}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Object_8c_a7433aa656288775b4d203ec4ed5865fa}\label{Object_8c_a7433aa656288775b4d203ec4ed5865fa}} 
+\#define {\bfseries M\+A\+X\+\_\+\+O\+P\+T\+I\+O\+NS}~5
+\item 
+\mbox{\Hypertarget{Object_8c_a2b9d4cb1200ff8c085b0a4902e0d7229}\label{Object_8c_a2b9d4cb1200ff8c085b0a4902e0d7229}} 
+\#define {\bfseries M\+A\+X\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{Object_8c_a9acb4268d9d78367eecd1878b25ca45e}{Object\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Allocates memory for a new object structure =$>$ ID and name. \end{DoxyCompactList}\item 
+void \hyperlink{Object_8c_a1c9f33d5777925fa30a168f6595f57be}{Object\+\_\+destroy} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Frees the memory assigned to the object pointer previously created. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_af0b67751c23c533242a6539afaf6d43e}{Object\+\_\+set\+\_\+\+ID} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$a, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em It changes the previous object\textquotesingle{}s id for a new one which is passed by reference. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a2dd94a9e2a1315fc2a7f5d3e29872575}{Object\+\_\+set\+\_\+name} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$a, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Sets a new name for an object. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a82eb39ab835b5dfca5ba14e7033409a7}{Object\+\_\+set\+\_\+description} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Sets the description of an object. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Object_8c_aeed02f386b2dc216a25a7301ba16afd1}{Object\+\_\+get\+\_\+name} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Getter for the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{Object_8c_a88c0e0397c072bc158fe8b5c95c316f6}{Object\+\_\+get\+\_\+id} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Getter for the object\textquotesingle{}s id. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a31383099f89794738d092ac374cfab75}{Object\+\_\+print} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Prints the object\textquotesingle{}s id and name in external screen. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Object_8c_ab756836fc2ed39963d8749723a2b5a1a}{Object\+\_\+get\+\_\+description} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the description of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{Object_8c_a7469335a10a7ba7567153df2efc677fd}{Object\+\_\+can\+\_\+illuminate} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the illumination(bool) of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a425218988343ebd356c6fca67f944af7}{Object\+\_\+set\+\_\+illuminate} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} state)
+\begin{DoxyCompactList}\small\item\em Sets the illumination field of the object to T\+R\+UE or F\+A\+L\+SE. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{Object_8c_aeceeb68f713d4c94849153ebbe78fda8}{Object\+\_\+get\+\_\+movable} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the movable of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a9f6c3c7e441221dba66a77bc8f1190f1}{Object\+\_\+set\+\_\+movable} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} state)
+\begin{DoxyCompactList}\small\item\em Sets the movable field of the object to T\+R\+UE or F\+A\+L\+SE. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{Object_8c_a748e85f0a8220aedad1d307b4771d0c0}{Object\+\_\+get\+\_\+moved} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the moved of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a9bb14a3482b6aa2bc133c42cd50c42a1}{Object\+\_\+set\+\_\+moved} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} state)
+\begin{DoxyCompactList}\small\item\em Sets the moved field of the object to T\+R\+UE or F\+A\+L\+SE. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{Object_8c_a5c880678e8ddae667af9669fcc8fc269}{Object\+\_\+get\+\_\+hidden} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the hidden of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_ade02e79409bbfa29caf694953ab12d92}{Object\+\_\+set\+\_\+hidden} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} status)
+\begin{DoxyCompactList}\small\item\em Sets the hidden field of the object to T\+R\+UE or F\+A\+L\+SE. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{Object_8c_ae9c35f28b0745907eb4aaad08aa2bed6}{Object\+\_\+get\+\_\+open} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the open of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a2386abdeffa264ac30acd7a74c5fa89c}{Object\+\_\+set\+\_\+open} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Sets the open field of the object to the id of the link it can open. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a631a944db3a4adff070b9d09cd72dbd7}{Object\+\_\+set\+\_\+turned\+On} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} state)
+\begin{DoxyCompactList}\small\item\em Checks if the object can illuminate and then turns it on. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{Object_8c_a9c6244086855cb51dcd25d326da9843b}{Object\+\_\+get\+\_\+turned\+On} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the turned\+On field \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_ac7427d11ed56cc17392a386d9b34f818}{Object\+\_\+set\+\_\+moved\+\_\+description} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em sets the description for when the object has been moved \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Object_8c_aef724673fb99fc8c80b1372edebad17a}{Object\+\_\+get\+\_\+moved\+\_\+description} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the (moved) description field \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{Object_8c_a46011fb0b87de156e3636e5c01408501}{Object\+\_\+set\+\_\+starter\+\_\+loc} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em sets the location the objects starts in \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{Object_8c_a24e3b989e65e7fb4ff13e099e931b987}{Object\+\_\+get\+\_\+starter\+\_\+loc} (\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$o)
+\begin{DoxyCompactList}\small\item\em returns the location the objects starts in \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the object interface and all the function to manage it. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Object_8c_a7469335a10a7ba7567153df2efc677fd}\label{Object_8c_a7469335a10a7ba7567153df2efc677fd}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+can\+\_\+illuminate@{Object\+\_\+can\+\_\+illuminate}}
+\index{Object\+\_\+can\+\_\+illuminate@{Object\+\_\+can\+\_\+illuminate}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+can\+\_\+illuminate()}{Object\_can\_illuminate()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} Object\+\_\+can\+\_\+illuminate (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the illumination(bool) of an object 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a9acb4268d9d78367eecd1878b25ca45e}\label{Object_8c_a9acb4268d9d78367eecd1878b25ca45e}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+create@{Object\+\_\+create}}
+\index{Object\+\_\+create@{Object\+\_\+create}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+create()}{Object\_create()}}
+{\footnotesize\ttfamily \hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}$\ast$ Object\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Allocates memory for a new object structure =$>$ ID and name. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object$\ast$ \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a1c9f33d5777925fa30a168f6595f57be}\label{Object_8c_a1c9f33d5777925fa30a168f6595f57be}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+destroy@{Object\+\_\+destroy}}
+\index{Object\+\_\+destroy@{Object\+\_\+destroy}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+destroy()}{Object\_destroy()}}
+{\footnotesize\ttfamily void Object\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Frees the memory assigned to the object pointer previously created. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$a} & \+: 13-\/03-\/2019 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Object_8c_ab756836fc2ed39963d8749723a2b5a1a}\label{Object_8c_ab756836fc2ed39963d8749723a2b5a1a}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+description@{Object\+\_\+get\+\_\+description}}
+\index{Object\+\_\+get\+\_\+description@{Object\+\_\+get\+\_\+description}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+description()}{Object\_get\_description()}}
+{\footnotesize\ttfamily char$\ast$ Object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the description of an object 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 01-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a5c880678e8ddae667af9669fcc8fc269}\label{Object_8c_a5c880678e8ddae667af9669fcc8fc269}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+hidden@{Object\+\_\+get\+\_\+hidden}}
+\index{Object\+\_\+get\+\_\+hidden@{Object\+\_\+get\+\_\+hidden}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+hidden()}{Object\_get\_hidden()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} Object\+\_\+get\+\_\+hidden (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the hidden of an object 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a88c0e0397c072bc158fe8b5c95c316f6}\label{Object_8c_a88c0e0397c072bc158fe8b5c95c316f6}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+id@{Object\+\_\+get\+\_\+id}}
+\index{Object\+\_\+get\+\_\+id@{Object\+\_\+get\+\_\+id}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+id()}{Object\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} Object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter for the object\textquotesingle{}s id. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_aeceeb68f713d4c94849153ebbe78fda8}\label{Object_8c_aeceeb68f713d4c94849153ebbe78fda8}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+movable@{Object\+\_\+get\+\_\+movable}}
+\index{Object\+\_\+get\+\_\+movable@{Object\+\_\+get\+\_\+movable}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+movable()}{Object\_get\_movable()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} Object\+\_\+get\+\_\+movable (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the movable of an object 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a748e85f0a8220aedad1d307b4771d0c0}\label{Object_8c_a748e85f0a8220aedad1d307b4771d0c0}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+moved@{Object\+\_\+get\+\_\+moved}}
+\index{Object\+\_\+get\+\_\+moved@{Object\+\_\+get\+\_\+moved}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+moved()}{Object\_get\_moved()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} Object\+\_\+get\+\_\+moved (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the moved of an object 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_aef724673fb99fc8c80b1372edebad17a}\label{Object_8c_aef724673fb99fc8c80b1372edebad17a}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+moved\+\_\+description@{Object\+\_\+get\+\_\+moved\+\_\+description}}
+\index{Object\+\_\+get\+\_\+moved\+\_\+description@{Object\+\_\+get\+\_\+moved\+\_\+description}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+moved\+\_\+description()}{Object\_get\_moved\_description()}}
+{\footnotesize\ttfamily char$\ast$ Object\+\_\+get\+\_\+moved\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the (moved) description field 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ \+: 13-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_aeed02f386b2dc216a25a7301ba16afd1}\label{Object_8c_aeed02f386b2dc216a25a7301ba16afd1}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+name@{Object\+\_\+get\+\_\+name}}
+\index{Object\+\_\+get\+\_\+name@{Object\+\_\+get\+\_\+name}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+name()}{Object\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ Object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Getter for the object\textquotesingle{}s name. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_ae9c35f28b0745907eb4aaad08aa2bed6}\label{Object_8c_ae9c35f28b0745907eb4aaad08aa2bed6}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+open@{Object\+\_\+get\+\_\+open}}
+\index{Object\+\_\+get\+\_\+open@{Object\+\_\+get\+\_\+open}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+open()}{Object\_get\_open()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} Object\+\_\+get\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the open of an object 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a24e3b989e65e7fb4ff13e099e931b987}\label{Object_8c_a24e3b989e65e7fb4ff13e099e931b987}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+starter\+\_\+loc@{Object\+\_\+get\+\_\+starter\+\_\+loc}}
+\index{Object\+\_\+get\+\_\+starter\+\_\+loc@{Object\+\_\+get\+\_\+starter\+\_\+loc}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+starter\+\_\+loc()}{Object\_get\_starter\_loc()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} Object\+\_\+get\+\_\+starter\+\_\+loc (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the location the objects starts in 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id \+: 15-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a9c6244086855cb51dcd25d326da9843b}\label{Object_8c_a9c6244086855cb51dcd25d326da9843b}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+get\+\_\+turned\+On@{Object\+\_\+get\+\_\+turned\+On}}
+\index{Object\+\_\+get\+\_\+turned\+On@{Object\+\_\+get\+\_\+turned\+On}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+get\+\_\+turned\+On()}{Object\_get\_turnedOn()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} Object\+\_\+get\+\_\+turned\+On (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+returns the turned\+On field 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL \+: 13-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a31383099f89794738d092ac374cfab75}\label{Object_8c_a31383099f89794738d092ac374cfab75}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+print@{Object\+\_\+print}}
+\index{Object\+\_\+print@{Object\+\_\+print}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+print()}{Object\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Prints the object\textquotesingle{}s id and name in external screen. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a82eb39ab835b5dfca5ba14e7033409a7}\label{Object_8c_a82eb39ab835b5dfca5ba14e7033409a7}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+description@{Object\+\_\+set\+\_\+description}}
+\index{Object\+\_\+set\+\_\+description@{Object\+\_\+set\+\_\+description}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+description()}{Object\_set\_description()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{char $\ast$}]{desc }\end{DoxyParamCaption})}
+
+
+
+Sets the description of an object. 
+
+\begin{DoxyAuthor}{Author}
+S. Xiao Fernandez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$o} & $\ast$desc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_ade02e79409bbfa29caf694953ab12d92}\label{Object_8c_ade02e79409bbfa29caf694953ab12d92}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+hidden@{Object\+\_\+set\+\_\+hidden}}
+\index{Object\+\_\+set\+\_\+hidden@{Object\+\_\+set\+\_\+hidden}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+hidden()}{Object\_set\_hidden()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+hidden (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{status }\end{DoxyParamCaption})}
+
+
+
+Sets the hidden field of the object to T\+R\+UE or F\+A\+L\+SE. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_af0b67751c23c533242a6539afaf6d43e}\label{Object_8c_af0b67751c23c533242a6539afaf6d43e}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+\+ID@{Object\+\_\+set\+\_\+\+ID}}
+\index{Object\+\_\+set\+\_\+\+ID@{Object\+\_\+set\+\_\+\+ID}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+\+I\+D()}{Object\_set\_ID()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+\+ID (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{a,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+It changes the previous object\textquotesingle{}s id for a new one which is passed by reference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \& id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a425218988343ebd356c6fca67f944af7}\label{Object_8c_a425218988343ebd356c6fca67f944af7}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+illuminate@{Object\+\_\+set\+\_\+illuminate}}
+\index{Object\+\_\+set\+\_\+illuminate@{Object\+\_\+set\+\_\+illuminate}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+illuminate()}{Object\_set\_illuminate()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+illuminate (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the illumination field of the object to T\+R\+UE or F\+A\+L\+SE. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a9f6c3c7e441221dba66a77bc8f1190f1}\label{Object_8c_a9f6c3c7e441221dba66a77bc8f1190f1}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+movable@{Object\+\_\+set\+\_\+movable}}
+\index{Object\+\_\+set\+\_\+movable@{Object\+\_\+set\+\_\+movable}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+movable()}{Object\_set\_movable()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+movable (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the movable field of the object to T\+R\+UE or F\+A\+L\+SE. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a9bb14a3482b6aa2bc133c42cd50c42a1}\label{Object_8c_a9bb14a3482b6aa2bc133c42cd50c42a1}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+moved@{Object\+\_\+set\+\_\+moved}}
+\index{Object\+\_\+set\+\_\+moved@{Object\+\_\+set\+\_\+moved}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+moved()}{Object\_set\_moved()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+moved (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the moved field of the object to T\+R\+UE or F\+A\+L\+SE. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_ac7427d11ed56cc17392a386d9b34f818}\label{Object_8c_ac7427d11ed56cc17392a386d9b34f818}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+moved\+\_\+description@{Object\+\_\+set\+\_\+moved\+\_\+description}}
+\index{Object\+\_\+set\+\_\+moved\+\_\+description@{Object\+\_\+set\+\_\+moved\+\_\+description}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+moved\+\_\+description()}{Object\_set\_moved\_description()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+moved\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+sets the description for when the object has been moved 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,char$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 13-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a2dd94a9e2a1315fc2a7f5d3e29872575}\label{Object_8c_a2dd94a9e2a1315fc2a7f5d3e29872575}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+name@{Object\+\_\+set\+\_\+name}}
+\index{Object\+\_\+set\+\_\+name@{Object\+\_\+set\+\_\+name}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+name()}{Object\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{a,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets a new name for an object. 
+
+\begin{DoxyAuthor}{Author}
+Rodrigo Juez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$a} & $\ast$name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a2386abdeffa264ac30acd7a74c5fa89c}\label{Object_8c_a2386abdeffa264ac30acd7a74c5fa89c}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+open@{Object\+\_\+set\+\_\+open}}
+\index{Object\+\_\+set\+\_\+open@{Object\+\_\+set\+\_\+open}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+open()}{Object\_set\_open()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Sets the open field of the object to the id of the link it can open. 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a46011fb0b87de156e3636e5c01408501}\label{Object_8c_a46011fb0b87de156e3636e5c01408501}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+starter\+\_\+loc@{Object\+\_\+set\+\_\+starter\+\_\+loc}}
+\index{Object\+\_\+set\+\_\+starter\+\_\+loc@{Object\+\_\+set\+\_\+starter\+\_\+loc}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+starter\+\_\+loc()}{Object\_set\_starter\_loc()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+starter\+\_\+loc (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+sets the location the objects starts in 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 15-\/04-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Object_8c_a631a944db3a4adff070b9d09cd72dbd7}\label{Object_8c_a631a944db3a4adff070b9d09cd72dbd7}} 
+\index{Object.\+c@{Object.\+c}!Object\+\_\+set\+\_\+turned\+On@{Object\+\_\+set\+\_\+turned\+On}}
+\index{Object\+\_\+set\+\_\+turned\+On@{Object\+\_\+set\+\_\+turned\+On}!Object.\+c@{Object.\+c}}
+\subsubsection{\texorpdfstring{Object\+\_\+set\+\_\+turned\+On()}{Object\_set\_turnedOn()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Object\+\_\+set\+\_\+turned\+On (\begin{DoxyParamCaption}\item[{\hyperlink{Object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{o,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{state }\end{DoxyParamCaption})}
+
+
+
+Checks if the object can illuminate and then turns it on. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Object$\ast$,bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR or OK \+: 11-\/04-\/2019 
+\end{DoxyReturn}

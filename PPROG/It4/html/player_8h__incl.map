@@ -1,0 +1,8 @@
+<map id="player.h" name="player.h">
+<area shape="rect" id="node2" href="$Object_8h.html" title="It defines an Object. " alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node4" href="$space_8h.html" title="It defines a space. " alt="" coords="112,80,180,107"/>
+<area shape="rect" id="node5" href="$set_8h_source.html" title="set.h" alt="" coords="229,155,279,181"/>
+<area shape="rect" id="node7" href="$inventory_8h.html" title="It defines which how many objects the player is going to have. " alt="" coords="256,80,343,107"/>
+<area shape="rect" id="node3" href="$types_8h.html" title="It defines common types. " alt="" coords="113,229,179,256"/>
+<area shape="rect" id="node6" href="$link_8h.html" title="It defines the link, which spaces it links, and whether it open or closed. " alt="" coords="151,155,205,181"/>
+</map>

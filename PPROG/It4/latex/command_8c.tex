@@ -1,0 +1,64 @@
+\hypertarget{command_8c}{}\section{command.\+c File Reference}
+\label{command_8c}\index{command.\+c@{command.\+c}}
+
+
+It implements the command interpreter.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+Include dependency graph for command.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{command_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} \hyperlink{command_8c_afe107f7479f6f9f3eab2078508fdfd55}{get\+\_\+user\+\_\+input} ()
+\begin{DoxyCompactList}\small\item\em It\textquotesingle{}s basically a scanf for the commands in the promt where it compares the input to the to the commands in cmd\+\_\+to\+\_\+str. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{command_8c_aa491d83d4e2f55a3074e418318a8d0fe}\label{command_8c_aa491d83d4e2f55a3074e418318a8d0fe}} 
+char $\ast$ {\bfseries cmd\+\_\+to\+\_\+str} \mbox{[}N\+\_\+\+C\+MD\mbox{]} = \{\char`\"{}No command\char`\"{}, \char`\"{}Unknown\char`\"{},\char`\"{}Exit\char`\"{}, \char`\"{}Pick\char`\"{}, \char`\"{}Drop\char`\"{}, \char`\"{}Move\char`\"{}, \char`\"{}Inspect\char`\"{}, \char`\"{}Turn\+On\char`\"{}, \char`\"{}Turn\+Off\char`\"{}, \char`\"{}Open\char`\"{}, \char`\"{}Save\char`\"{}, \char`\"{}Load\char`\"{}\}
+\item 
+\mbox{\Hypertarget{command_8c_a6397d54c2691d7e8ffe9a8da5db5df58}\label{command_8c_a6397d54c2691d7e8ffe9a8da5db5df58}} 
+char $\ast$ {\bfseries short\+\_\+cmd\+\_\+to\+\_\+str} \mbox{[}N\+\_\+\+C\+MD\mbox{]} = \{\char`\"{}\char`\"{},\char`\"{}\char`\"{},\char`\"{}e\char`\"{},\char`\"{}p\char`\"{},\char`\"{}d\char`\"{},\char`\"{}m\char`\"{},\char`\"{}i\char`\"{},\char`\"{}ton\char`\"{},\char`\"{}toff\char`\"{},\char`\"{}o\char`\"{},\char`\"{}s\char`\"{},\char`\"{}ld\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the command interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19-\/12-\/2014 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{command_8c_afe107f7479f6f9f3eab2078508fdfd55}\label{command_8c_afe107f7479f6f9f3eab2078508fdfd55}} 
+\index{command.\+c@{command.\+c}!get\+\_\+user\+\_\+input@{get\+\_\+user\+\_\+input}}
+\index{get\+\_\+user\+\_\+input@{get\+\_\+user\+\_\+input}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+user\+\_\+input()}{get\_user\_input()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+It\textquotesingle{}s basically a scanf for the commands in the promt where it compares the input to the to the commands in cmd\+\_\+to\+\_\+str. 
+
+\begin{DoxyReturn}{Returns}
+T\+\_\+\+Command \+: 13-\/03-\/2019 
+\end{DoxyReturn}

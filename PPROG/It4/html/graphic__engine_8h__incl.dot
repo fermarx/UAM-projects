@@ -1,0 +1,33 @@
+digraph "graphic_engine.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="graphic_engine.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="game.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game_8h.html",tooltip="It defines the game&#39;s functions, commands implementation and game&#39;s structure. "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="command.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$command_8h.html",tooltip="It implements the command interpreter. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h.html",tooltip="It defines a Player. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="object.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$object_8h_source.html"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$types_8h.html",tooltip="It defines common types. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="inventory.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$inventory_8h.html",tooltip="It defines which how many objects the player is going to have. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="set.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$set_8h_source.html"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="link.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$link_8h.html",tooltip="It defines the link, which spaces it links, and whether it open or closed. "];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="space.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$space_8h.html",tooltip="It defines a space. "];
+  Node10 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

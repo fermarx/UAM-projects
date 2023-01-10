@@ -1,0 +1,83 @@
+\hypertarget{inventory_8h}{}\section{inventory.\+h File Reference}
+\label{inventory_8h}\index{inventory.\+h@{inventory.\+h}}
+
+
+It defines which how many objects the player is going to have.  
+
+
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for inventory.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{inventory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inventory_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}\label{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}} 
+typedef struct \hyperlink{struct__Inventory}{\+\_\+\+Inventory} {\bfseries Inventory}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{inventory_8h_a13244c635538fa78b1443f351f94e362}\label{inventory_8h_a13244c635538fa78b1443f351f94e362}} 
+\hyperlink{struct__Inventory}{Inventory} $\ast$ {\bfseries inventory\+\_\+create} (int max\+\_\+obj)
+\item 
+\mbox{\Hypertarget{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}\label{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries inventory\+\_\+destroy} (\hyperlink{struct__Inventory}{Inventory} $\ast$inventory)
+\item 
+\mbox{\Hypertarget{inventory_8h_a0260f56ca20de5fe5295bae215d6ddb9}\label{inventory_8h_a0260f56ca20de5fe5295bae215d6ddb9}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries inventory\+\_\+set\+\_\+max\+\_\+obj} (\hyperlink{struct__Inventory}{Inventory} $\ast$inventory, int max\+Obj)
+\item 
+\mbox{\Hypertarget{inventory_8h_a53a38b8d58370ab50cc2803cca3d2b89}\label{inventory_8h_a53a38b8d58370ab50cc2803cca3d2b89}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries inventory\+\_\+set\+\_\+object} (\hyperlink{struct__Inventory}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id\+\_\+obj)
+\item 
+\mbox{\Hypertarget{inventory_8h_a585b37d5b1f38f4455ed0f33761510d4}\label{inventory_8h_a585b37d5b1f38f4455ed0f33761510d4}} 
+int {\bfseries inventory\+\_\+get\+\_\+max\+\_\+obj} (\hyperlink{struct__Inventory}{Inventory} $\ast$inventory)
+\item 
+\mbox{\Hypertarget{inventory_8h_ae544f0902a2cbbc1e1b26a3d12dee790}\label{inventory_8h_ae544f0902a2cbbc1e1b26a3d12dee790}} 
+\hyperlink{struct__Set}{Set} $\ast$ {\bfseries inventory\+\_\+get\+\_\+objects} (\hyperlink{struct__Inventory}{Inventory} $\ast$inventory)
+\item 
+\mbox{\Hypertarget{inventory_8h_a4f3cdc3d22abbc9ebc1e8808f67f757d}\label{inventory_8h_a4f3cdc3d22abbc9ebc1e8808f67f757d}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries inventory\+\_\+print} (\hyperlink{struct__Inventory}{Inventory} $\ast$inventory)
+\item 
+\mbox{\Hypertarget{inventory_8h_aa7f53b878859af3553b4ebc4d4a5909e}\label{inventory_8h_aa7f53b878859af3553b4ebc4d4a5909e}} 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} {\bfseries inventory\+\_\+contain\+\_\+id} (\hyperlink{struct__Inventory}{Inventory} $\ast$inv, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\mbox{\Hypertarget{inventory_8h_a046e96fa72b449e8efca96fee6a33062}\label{inventory_8h_a046e96fa72b449e8efca96fee6a33062}} 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} {\bfseries inventory\+\_\+is\+\_\+full} (\hyperlink{struct__Inventory}{Inventory} $\ast$inv)
+\item 
+\mbox{\Hypertarget{inventory_8h_af66fb62fc09da1258311b0c3843c2ca3}\label{inventory_8h_af66fb62fc09da1258311b0c3843c2ca3}} 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} {\bfseries inventory\+\_\+delete\+\_\+object} (\hyperlink{struct__Inventory}{Inventory} $\ast$inv, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\item 
+\mbox{\Hypertarget{inventory_8h_ab77ecc647b964d3c5cda17dfe6b35273}\label{inventory_8h_ab77ecc647b964d3c5cda17dfe6b35273}} 
+int {\bfseries inventory\+\_\+get\+\_\+number\+\_\+of\+\_\+objects} (\hyperlink{struct__Inventory}{Inventory} $\ast$inv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines which how many objects the player is going to have. 
+
+\begin{DoxyAuthor}{Author}
+S. Xiao Fernandez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}

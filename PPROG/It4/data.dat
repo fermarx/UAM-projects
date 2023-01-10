@@ -1,0 +1,70 @@
+#s:1|Casilla 1|-1|-1|1|-1|-1|-1|This is the room you start in, you can only move in one direction|starter room|0
+#s:2|Casilla 2|1|-1|2|-1|-1|-1|Nothing special about this room|second room|0
+#s:3|Casilla 3|2|-1|3|-1|-1|-1|Nothing special about this room|third room|0
+#s:4|Casilla 4|3|-1|4|-1|-1|-1|Nothing special about this room|fourth room|0
+#s:5|Casilla 5 (Goose)|4|25|5|-1|-1|-1|There is a hidden door in this room Hope it is open.|fifth room|0&<O)__/ &  \_-/ &   ||  &
+#s:6|Casilla 6|5|-1|6|-1|-1|-1|Nothing special about this room|sixth room|0
+#s:7|Casilla 7|6|-1|7|-1|-1|-1|Nothing special about this room|seventh room|0
+#s:8|Casilla 8 (Bridge)|7|30|8|-1|-1|-1|Just a room with a teleport to a far one, nothing weird right?|eighth room|0&  ___  & / _ \ &/ / \ \&
+#s:9|Casilla 9 (Goose)|8|26|9|-1|-1|-1|There is a hidden door in this room Hope it is open.|ninth room|0&<O)__/ &  \_-/ &   ||  &
+#s:10|Casilla 10|9|-1|10|-1|-1|-1|Nothing special about this room|tenth room|0
+#s:11|Casilla 11|10|-1|11|-1|-1|-1|Nothing special about this room|eleventh room|0
+#s:12|Casilla 12|11|-1|12|-1|-1|-1|Nothing special about this room|twelfth room|0
+#s:13|Casilla 13 (Goose)|12|27|13|-1|-1|-1|There is a hidden door in this room Hope it is open.|thirteenth room|0&<O)__/ &  \_-/ &   ||  &  
+#s:14|Casilla 14|13|-1|14|-1|-1|-1|Nothing special about this room|fourteenth room|0
+#s:15|Casilla 15|14|-1|15|-1|-1|-1|Nothing special about this room|fifteenth room|0
+#s:16|Casilla 16 (Bridge)|15|-1|16|30|-1|-1|Just a room with a teleport to a far one, nothing weird right?|sixteenth room|0&  ___  & / _ \ &/ / \ \&
+#s:17|Casilla 17 (Goose)|16|28|17|-1|-1|-1|There is a hidden door in this room Hope it is open.|seventeenth room|0&<O)__/ &  \_-/ &   ||  &
+#s:18|Casilla 18|17|-1|18|-1|-1|-1|Nothing special about this room|eighteenth room|0
+#s:19|Casilla 19|18|-1|19|-1|-1|-1|Nothing special about this room|nineteenth room|0
+#s:20|Casilla 20|19|-1|20|-1|-1|-1|Nothing special about this room|twentieth room|0
+#s:21|Casilla 21 (Goose)|20|29|21|-1|-1|-1|There is a hidden door in this room Hope it is open.|twenty-first room|0&<O)__/ &  \_-/ &   ||  &  
+#s:22|Casilla 22 (Death)|21|31|22|-1|-1|-1|There is a trap somewhere in this room, mind your step,|twenty-second room|0&  ___  & (o o) &  \m/  &
+#s:23|Casilla 23|22|-1|23|-1|-1|-1|Nothing special about this room|twenty-third room|0
+#s:24|Casilla 24|23|-1|24|-1|-1|-1|Nothing special about this room|twenty-fourth room|0
+#s:25|Casilla 25 (Goose)|24|-1|-1|-1|-1|-1|There is a hidden door in this room Hope it is open.|twenty-fifth room|0&<O)__/ &  \_-/ &   ||  &
+
+
+#o:1|Key|2|An old key that can open anything|The key wasn't here OMG|0|25|1|0|0|0|
+#o:2|Ob2|11|A rusty sword, useless|The sword wasn't here OMG|0|-1|1|0|0|0|
+#o:3|Ob3|3|Rotten tomato, you can throw it to somebody|The tomato wasn't here OMG|0|-1|1|0|0|0|
+#o:4|Ob4|10|An enchanted sword that can slice in pieces anyone in your path|The enchanted sword wasn't here OMG|0|-1|1|0|0|0|
+#o:5|Ob5|20|Migthy spell book, seems like you can learn new spells from it|The enchanted book wasn't here OMG|0|-1|1|0|0|0|
+#o:6|Ob6|7|a dead squirrel. You should give it a decent burial|The dead squirrel wasn't here OMG(zombies?)|0|-1|1|0|0|0|
+#o:7|Ob7|19|Book, the plot goes about 10 people invited to a Mansion, looks interesting...|The book wasn't here OMG|0|-1|1|0|0|0|
+#o:8|Ob8|4|Chicken eggs, yammy!|The eggs wasn't here OMG|0|-1|1|0|0|0|
+#o:9|Ob9|8|A very heavy and strong Shield, it can protect you from bad stuff|The shield wasn't here OMG|0|-1|1|0|0|0|
+#o:10|Trx|1|Torch, maybe you can cast a fire with it and illuminate|The torch wasn't here OMG who cares as long as it can be lit|1|-1|1|0|0|0|
+
+
+#l:1|L1|1|2|1
+#l:2|L2|2|3|1
+#l:3|L3|3|4|1
+#l:4|L4|4|5|1
+#l:5|L5|5|6|1
+#l:6|L6|6|7|1
+#l:7|L7|7|8|1
+#l:8|L8|8|9|1
+#l:9|L9|9|10|1
+#l:10|L10|10|11|1
+#l:11|L11|11|12|1
+#l:12|L12|12|13|1
+#l:13|L13|13|14|1
+#l:14|L14|14|15|1
+#l:15|L15|15|16|1
+#l:16|L16|16|17|1
+#l:17|L17|17|18|1
+#l:18|L18|18|19|1
+#l:19|L19|19|20|1
+#l:20|L20|20|21|1
+#l:21|L21|21|22|1
+#l:22|L22|22|23|1
+#l:23|L23|23|24|1
+#l:24|L24|24|25|1
+#l:25|G1|5|9|0
+#l:26|G2|9|13|1
+#l:27|G3|13|17|1
+#l:28|G4|17|21|1
+#l:29|G5|21|25|1
+#l:30|Brg|8|16|1
+#l:31|Dth|22|1|1

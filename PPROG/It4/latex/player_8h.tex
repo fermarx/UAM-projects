@@ -1,0 +1,359 @@
+\hypertarget{player_8h}{}\section{player.\+h File Reference}
+\label{player_8h}\index{player.\+h@{player.\+h}}
+
+
+It defines a Player.  
+
+
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inventory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for player.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{player_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Player}{\+\_\+\+Player} \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}
+\begin{DoxyCompactList}\small\item\em It can store the place is located in, name, object and Id of the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_a97ea1d0deda3c51ef6ce63a13dab7a38}{player\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Initializes a new player. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}{player\+\_\+destroy} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Frees the dinamic memory allocated for the player. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_af92901f53a33ee9083a14fd947898e06}{player\+\_\+set\+\_\+space} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Checks if player and the space exist, if so, assign the space to the player. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_a6a30809f7775f5c2d3bef47d92769e59}{player\+\_\+set\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Assign the name to the player which the user introduced. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_af5eacaf6a51631f28500d8127e761c1b}{player\+\_\+set\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Assign the object to the player. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{player_8h_a6622c02be2fe230a5c0df66385a13ece}{player\+\_\+get\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtains the name to the player introduced by the user. \end{DoxyCompactList}\item 
+\hyperlink{struct__Inventory}{Inventory} $\ast$ \hyperlink{player_8h_a270da6469a85e0c2b7f9f4088d290051}{player\+\_\+get\+\_\+inventory} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em returns the inventory of a player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8h_af5a101ec91427951c5875569a8709956}{player\+\_\+get\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtains the ID of the player. \end{DoxyCompactList}\item 
+int \hyperlink{player_8h_a1bb5025f8623a6ae756fee928aa30fe1}{player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Returns how many objects the player has. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{player_8h_a04621c0bf1f812bea1ad0c66ee123b32}\label{player_8h_a04621c0bf1f812bea1ad0c66ee123b32}} 
+int {\bfseries player\+\_\+get\+\_\+max\+\_\+number\+\_\+of\+\_\+objects} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8h_a4eabc7f4e8d852ef582ee331c104207c}{player\+\_\+get\+\_\+space} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Obtains the A\+DT space from the player aka the position) \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_aa0f2f8b4d1b63a60ef927d47aa45dbd1}{player\+\_\+print} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Prints the player\textquotesingle{}s ID, name, the object assigned and the space (location) in an external screen. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{player_8h_abf508d34f89302280453c18367fd87ab}{player\+\_\+contain\+\_\+object\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$p, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em If the Id that you send is in the inventory the function returns OK. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{player_8h_a669378949073581cec53d0ab5c306255}\label{player_8h_a669378949073581cec53d0ab5c306255}} 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} $\ast$ {\bfseries player\+\_\+get\+\_\+objects\+\_\+array} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines a Player. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{player_8h_af30e2030635a69690f85e48bc6ef202f}\label{player_8h_af30e2030635a69690f85e48bc6ef202f}} 
+\index{player.\+h@{player.\+h}!Player@{Player}}
+\index{Player@{Player}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{Player}{Player}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Player}{\+\_\+\+Player} \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}}
+
+
+
+It can store the place is located in, name, object and Id of the player. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu \+: 13-\/03-\/2019 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{player_8h_abf508d34f89302280453c18367fd87ab}\label{player_8h_abf508d34f89302280453c18367fd87ab}} 
+\index{player.\+h@{player.\+h}!player\+\_\+contain\+\_\+object\+\_\+id@{player\+\_\+contain\+\_\+object\+\_\+id}}
+\index{player\+\_\+contain\+\_\+object\+\_\+id@{player\+\_\+contain\+\_\+object\+\_\+id}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+contain\+\_\+object\+\_\+id()}{player\_contain\_object\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} player\+\_\+contain\+\_\+object\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{p,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+If the Id that you send is in the inventory the function returns OK. 
+
+\begin{DoxyAuthor}{Author}
+S. Xiao Fernández 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$player,Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR \+: 27-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a97ea1d0deda3c51ef6ce63a13dab7a38}\label{player_8h_a97ea1d0deda3c51ef6ce63a13dab7a38}} 
+\index{player.\+h@{player.\+h}!player\+\_\+create@{player\+\_\+create}}
+\index{player\+\_\+create@{player\+\_\+create}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+create()}{player\_create()}}
+{\footnotesize\ttfamily \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}$\ast$ player\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Initializes a new player. 
+
+\begin{DoxyAuthor}{Author}
+modified by S. Xiao Fernandez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Player$\ast$ \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}\label{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}} 
+\index{player.\+h@{player.\+h}!player\+\_\+destroy@{player\+\_\+destroy}}
+\index{player\+\_\+destroy@{player\+\_\+destroy}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+destroy()}{player\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Frees the dinamic memory allocated for the player. 
+
+\begin{DoxyAuthor}{Author}
+modified by S. Xiao Fernandez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_af5a101ec91427951c5875569a8709956}\label{player_8h_af5a101ec91427951c5875569a8709956}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}}
+\index{player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+id()}{player\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtains the ID of the player. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a270da6469a85e0c2b7f9f4088d290051}\label{player_8h_a270da6469a85e0c2b7f9f4088d290051}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}}
+\index{player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+inventory()}{player\_get\_inventory()}}
+{\footnotesize\ttfamily \hyperlink{struct__Inventory}{Inventory}$\ast$ player\+\_\+get\+\_\+inventory (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+returns the inventory of a player 
+
+\begin{DoxyAuthor}{Author}
+Carlos Garcia 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char$\ast$ \+: 6-\/5-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a6622c02be2fe230a5c0df66385a13ece}\label{player_8h_a6622c02be2fe230a5c0df66385a13ece}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}}
+\index{player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+name()}{player\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ player\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtains the name to the player introduced by the user. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char$\ast$ \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a1bb5025f8623a6ae756fee928aa30fe1}\label{player_8h_a1bb5025f8623a6ae756fee928aa30fe1}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects@{player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects}}
+\index{player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects@{player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects()}{player\_get\_number\_of\_objects()}}
+{\footnotesize\ttfamily int player\+\_\+get\+\_\+number\+\_\+of\+\_\+objects (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Returns how many objects the player has. 
+
+\begin{DoxyAuthor}{Author}
+modified by S. Xiao Fernandez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer (num of objects) \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a4eabc7f4e8d852ef582ee331c104207c}\label{player_8h_a4eabc7f4e8d852ef582ee331c104207c}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+space@{player\+\_\+get\+\_\+space}}
+\index{player\+\_\+get\+\_\+space@{player\+\_\+get\+\_\+space}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+space()}{player\_get\_space()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\+\_\+get\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtains the A\+DT space from the player aka the position) 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_aa0f2f8b4d1b63a60ef927d47aa45dbd1}\label{player_8h_aa0f2f8b4d1b63a60ef927d47aa45dbd1}} 
+\index{player.\+h@{player.\+h}!player\+\_\+print@{player\+\_\+print}}
+\index{player\+\_\+print@{player\+\_\+print}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+print()}{player\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Prints the player\textquotesingle{}s ID, name, the object assigned and the space (location) in an external screen. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a6a30809f7775f5c2d3bef47d92769e59}\label{player_8h_a6a30809f7775f5c2d3bef47d92769e59}} 
+\index{player.\+h@{player.\+h}!player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}}
+\index{player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+name()}{player\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Assign the name to the player which the user introduced. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_af5eacaf6a51631f28500d8127e761c1b}\label{player_8h_af5eacaf6a51631f28500d8127e761c1b}} 
+\index{player.\+h@{player.\+h}!player\+\_\+set\+\_\+object@{player\+\_\+set\+\_\+object}}
+\index{player\+\_\+set\+\_\+object@{player\+\_\+set\+\_\+object}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+object()}{player\_set\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Assign the object to the player. 
+
+\begin{DoxyAuthor}{Author}
+modified by S. Xiao Fernandez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR \+: 13-\/03-\/2019 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_af92901f53a33ee9083a14fd947898e06}\label{player_8h_af92901f53a33ee9083a14fd947898e06}} 
+\index{player.\+h@{player.\+h}!player\+\_\+set\+\_\+space@{player\+\_\+set\+\_\+space}}
+\index{player\+\_\+set\+\_\+space@{player\+\_\+set\+\_\+space}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+space()}{player\_set\_space()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Checks if player and the space exist, if so, assign the space to the player. 
+
+\begin{DoxyAuthor}{Author}
+Enmanuel Abreu 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR \+: 13-\/03-\/2019 
+\end{DoxyReturn}
