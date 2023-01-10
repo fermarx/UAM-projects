@@ -1,0 +1,28 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Login
+{% endblock %}
+
+{% block content_block %}
+
+      <h1>Log In</h1>
+      <form action="{{ url_for('login') }}" method="post">
+        <label><b>Introduzca su nombre de usuario</b></label>
+        {% if usuario %}
+          <input name="nickname" type="text" placeholder="Nombre" value={{usuario}}><br>
+        {% else %}
+          <input name="nickname" type="text" placeholder="Nombre"><br><br>
+        {% endif %}
+        
+        <label><b>Introduzca su contraseña</b></label>
+        <input name="password" type="password" placeholder="Contraseña"><br><br>
+        <div class = error_message>
+        {% for message in get_flashed_messages() %}
+          {{ message }}
+        {% endfor %}
+        </div>
+        <input type="submit" value="Iniciar Sesión" onclick = "`{{ url_for('principal') }}`.reload()"/><br>
+      </form>
+
+{% endblock %}

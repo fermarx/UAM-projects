@@ -1,0 +1,71 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Top USA
+{% endblock %}
+
+{% block content_block %}
+
+    <h1>Tabla Life</h1>
+    <table>
+        <tr>
+            <th> TITLE </th>
+            <th>GENRES</th>
+            <th>YEAR</th>
+            <th>ACTORS</th>
+            <th>DIRECTORS</th>
+        </tr>
+        <tr>
+            {% for life in dic_life %}
+                <td> {{ life[0] }} </td>
+                <td> {{ life[1] }} </td>
+                <td> {{ life[2] }} </td>
+                <td> {{ life[3] }} </td>
+                <td> {{ life[4] }} </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <h1>Tabla Woody Allen</h1>
+    <table>
+        <tr>
+            <th> TITLE </th>
+            <th>GENRES</th>
+            <th>YEAR</th>
+            <th>ACTORS</th>
+            <th>DIRECTORS</th>
+        </tr>
+        <tr>
+            {% for allen in dic_allen %}
+                <td> {{ allen[0] }} </td>
+                <td> {{ allen[1] }} </td>
+                <td> {{ allen[2] }} </td>
+                <td> {{ allen[3] }} </td>
+                <td> {{ allen[4] }} </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <h1>Tabla Parsons Gallecki</h1>
+    <table>
+        <tr>
+            <th> TITLE </th>
+            <th>GENRES</th>
+            <th>YEAR</th>
+            <th>ACTORS</th>
+            <th>DIRECTORS</th>
+        </tr>
+        <tr>
+            {% for gallecki in dic_gallecki %}
+                <td> {{ gallecki[0] }} </td>
+                <td> {{ gallecki[1] }} </td>
+                <td> {{ gallecki[2] }} </td>
+                <td> {{ gallecki[3] }} </td>
+                <td> {{ gallecki[4] }} </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+    <br>
+
+{% endblock %}

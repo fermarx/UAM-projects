@@ -1,0 +1,29 @@
+{% extends "principal.html" %}
+
+{% block script_block %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/registro.js') }}"></script>
+{% endblock %}
+
+{% block title_block %}
+    Registro
+{% endblock %}
+
+{% block content_block %}
+    <h1>Sign In</h1>  
+
+    <form id ="registro_form" action="{{ url_for('registro') }}" method="post" enctype = "multipart/form-data">
+      <a>Introduzca nombre: </a><input name="nickname"type="text" placeholder="Nombre">
+      <br><br>
+      <a>Introduzca contraseña: </a><input name="cont" type="password" placeholder="Contraseña" minlength="8">
+          <div id="progress_bar"></div>
+      <br><br>
+      <a>Introduzca e-mail: </a><input name="email" type="email" placeholder="Correo electrónico"><br><br>
+      <a>Introduzca número de tarjeta: </a><input name="creditcard" type="text" placeholder="Número tarjeta"><br><br>
+      <div class = error_message>
+      {% for message in get_flashed_messages() %}
+        {{ message }}
+      {% endfor %}
+      </div>
+      <input type="submit" name="submit" value="Registro">
+    </form>
+{% endblock %}

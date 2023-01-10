@@ -1,0 +1,49 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Indice
+{% endblock %}
+
+{% block content_block %}
+        <h2>Películas en SX entretainment</h2>
+        
+        <form action="{{ url_for('indice') }}" method="post">
+            <input id="search-bar" type="text" name="title">
+            <select name="category">
+                <option value="Ninguno">Ningún filtro</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Animacion">Animacion</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Accion">Acción</option>
+            </select>
+            <input type="submit" name="submit" value="Buscar">
+        </form>
+
+        <br>
+
+        <table>
+            <thead>
+                <th>Titulo</th>
+                <th>Poster</th>
+                <th>Director</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Año</th>
+            </thead>
+            {% for film in films %}
+                <tbody>
+                    <td>
+                        <a href="{{ url_for('producto', id=film.id) }}">
+                        <span>{{ film.titulo }}</span>
+                        </a>
+                    </td>
+                    <td><img src={{ url_for('static', filename='/'~film.poster) }} alt="{{ film.titulo }}" width="50" height="60"></td>
+                    <td><span>{{ film.director }}</span></td>
+                    <td><span>{{ film.precio }}€</span></td>
+                    <td><span>{{ film.categoria }}</span></td>
+                    <td><span>{{ film.año }}</span></td>
+                </tbody>
+            {% endfor %}
+        </table>
+
+{% endblock %}

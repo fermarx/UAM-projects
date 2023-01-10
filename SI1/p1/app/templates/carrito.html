@@ -1,0 +1,49 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Carrito
+{% endblock %}
+
+{% block content_block %}
+    <form action="url_for('saldo')" method="post">
+        <input id="cash" type="text" name="cash" placeholder="Añadir saldo">
+        <input type="submit" name="submit" value="Añadir saldo">
+        <div class = error_message>
+            {% for message in get_flashed_messages() %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    </form>
+
+
+    <h2>Películas alquiladas.</h2>
+
+    <table>
+        <tbody>
+            {% for film in films %}
+            <tr>
+                <td><img src="{{ url_for('static', filename='/'~film.poster) }}" alt="{{ film.titulo }}" width="50" height="60"></td>
+                <td><span>{{ film.titulo }}</span></td>
+                <td><span>{{film.amount}} x {{ film.precio }}€</span>
+                    <form action="{{ url_for('carrito') }}" method="post">
+                        <input type="hidden" name="prod_id" value={{ film.id }}>
+                        <input type="submit" name="submit" value="Eliminar">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if films %}
+    <div class = error_message>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+    </div>
+    <form action="{{ url_for('comprar') }}" method="post">
+        <input type="submit" name="submit" value="COMPRAR ({{ total }}€)">
+    </form>
+    {% else %}
+        <a>El carrito está vacío</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href={{ url_for('static', filename='css/estilobasico.css') }}>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/ajax.js') }}"></script>
+       
+        <title>SXE - {% block title_block %}{% endblock %}</title>
+        {% block script_block %}{% endblock %}
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 style=color:black; text-decoration: none; cursor:pointer;>
+                <a href="{{ url_for('indice') }}">SX ENTRETAINMENT</a></h1>
+            {% if session['nickname'] %}
+            {% elif not session['nickname']  %}
+            {% endif %}
+        </header>
+
+
+        <div class="column">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="{{ url_for('indice') }}">Índice</a></li>
+                <li><a href="{{ url_for('carrito') }}">Carrito</a></li>
+                {% if session['nickname'] %}
+                    <li><a name = "historial" href="{{ url_for('historial') }}">Historial</a></li>
+                    <li><a id = "logout" href="{{ url_for('logout') }}">Log Out</a></li>
+                {% elif not session['nickname']  %}
+                    <li><a name = "login" href="{{ url_for('login') }}" >Log In</a></li>
+                    <li><a name = "singin" href="{{ url_for('registro') }}">Sign In</a></li>
+                {% endif %}
+            </ul>
+            <div id="users"></div>
+        </div>
+    
+        <div class="content">
+            {% block content_block %}
+            
+            {% endblock %}
+        </div>
+
+        <div class="footer"><p>Copyrigth ©</p></div>
+    </body>
+</html>

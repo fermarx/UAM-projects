@@ -1,0 +1,31 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Carrito
+{% endblock %}
+
+{% block content_block %}
+    <form action="url_for('saldo')" method="post">
+        <input id="cash" type="text" name="cash" placeholder="Añadir saldo">
+        <input type="submit" name="submit" value="Añadir saldo">
+        <div class = error_message>
+            {% for message in get_flashed_messages() %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    </form>
+
+
+    <h2>Películas alquiladas.</h2>
+
+	<div class="item">
+		<table id="compras">
+            <tr>
+			    <th> Nombre </th>
+				<th> Cantidad </th>
+				<th> Precio </th>
+			</tr>
+        </table>
+	</div>
+
+{% endblock %}

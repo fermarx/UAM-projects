@@ -1,0 +1,38 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Producto
+{% endblock %}
+
+{% block content_block %}
+        <h3>{{ film.titulo }}</h3><br>
+        <img src={{ url_for('static', filename='/'~film.poster) }} alt="{{ film.titulo }}" width="400" height="550">
+
+        <h3>Sinopsis</h3>
+        <span>{{ film.resumen }}</span>
+        
+        <h3>Más información</h3>
+        <span>Año: {{ film.año }} | Director: {{ film.director }}</span>
+
+        <table>
+            <thead><th>Actores</th></thead>
+            {% for actor in film.actores %}
+                <tbody> <td><span>{{ actor }}</span></td></tbody>
+            {% endfor%}
+        </table>
+
+        <h2> {{ film.precio }} </h2>
+
+        {% if film.id in session['carrito'] %}
+            <form action="{{ url_for('producto', id=film.id)}}" method="post">
+                <input type="number" name="amount" min=0 value="{{ session['carrito'][film.id] }}">
+                <input type="submit" name="submit" value="Actualizar cantidad">
+            </form>
+        {% else %}
+            <form action="{{ url_for('producto', id=film.id)}}" method="post">
+                <input type="number" name="amount" min=0 value="1">
+                <input type="submit" name="submit" value="Añadir a la cesta">
+            </form>
+        {% endif %}
+
+{% endblock %}

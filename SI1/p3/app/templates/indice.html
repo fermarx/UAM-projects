@@ -1,0 +1,58 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Indice
+{% endblock %}
+
+{% block content_block %}
+        <h2>Películas en SX entretainment</h2>
+        
+        <form action="{{ url_for('indice') }}" method="post">
+            <input id="search-bar" type="text" name="title">
+            <select name="category">
+                <option value="Ninguno">Ningún filtro</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Animacion">Animacion</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Accion">Acción</option>
+            </select>
+            <input type="submit" name="submit" value="Buscar">
+        </form>
+
+        <br>
+        <table>
+            <tr>
+			    <th> AÑO </th>
+				<th> PELICULA </th>
+				<th> VENTAS</th>
+			</tr>
+
+            {% if topventas %}
+                {% for value in topventas %}
+                    <tr>
+                        <td> {{ value[0] }} </td>
+                        <td> {{ value[1] }} </td>
+                        <td> {{ value[2] }} </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+
+        </table>
+        <br>
+
+        <table>
+            <tr>
+			    <th> Titilo </th>
+				<th> Precio </th>
+			</tr>
+        {% for item in movies %}
+                <div>
+                    <tr>
+		                <td> <a href="{{url_for('producto',id=item[0])}}">{{ item[1] }} </a></td>
+                        <td> {{ item[2] }}€ </td>
+                    </tr>
+                </div>
+	    {% endfor %}
+        </table>
+
+{% endblock %}

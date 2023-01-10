@@ -1,0 +1,124 @@
+{ "peliculas": 
+  [ 
+    { 
+			"id": 1,
+			"titulo": "Star Wars: Episodio I - La amenaza fantasma",
+      "poster": "imagenes/guerraepisodio1.jpg",
+      "director": "George Lucas",
+      "precio": 17.50,
+      "categoria": "Ciencia Ficción",
+      "año": 1999,
+      "actores": 
+        ["Jake Lloyd","Ewan McGregor"],
+      "resumen":"Obi-Wan Kenobi es un joven aprendiz caballero Jedi bajo la tutela de Qui-Gon Jinn; Anakin Skywalker, quien después será padre de Luke Skywalker y se convertirá en Darth Vader, solamente es un niño de 9 años. Cuando la Federación de Comercio corta todas las rutas al planeta Naboo, Qui-Gon y Obi-Wan son asignados para solucionar el problema."
+    },
+    { 
+			"id": 2,
+			"titulo": "Star Wars: Episodio II - El ataque de los clones",
+      "poster": "imagenes/guerraepisodio2.jpg",
+      "director": "George Lucas",
+      "precio": 16.00,
+      "categoria": "Ciencia Ficción",
+      "año": 2002,
+      "actores": 
+        ["Hayden Christen","Natalie Portman"],
+      "resumen":"En el Senado Galáctico reina la inquietud. Varios miles de sistemas solares han declarado su intención de abandonar la República. La reina Amidala regresa al Senado para conseguir un ejército que ayude a los caballeros jedi."
+    },
+    { 
+			"id": 3,
+			"titulo": "Star Wars: Episodio III - La venganza de los Sith",
+      "poster": "imagenes/guerraepisodio3.jpg",
+      "director": "George Lucas",
+      "precio": 14.99,
+      "categoria": "Ciencia Ficción",
+      "año": 2005,
+      "actores": 
+        ["Hayden Christen","Ewan McGregor"],
+      "resumen":"Seducido por el lado oscuro, Anakin Skywalker se rebela contra su mentor, Obi-Wan Kenobi, y se convierte en Darth Vader."
+    },
+    { 
+			"id": 4,
+			"titulo": "Star Wars: Episodio IV - Una nueva esperanza",
+      "poster": "imagenes/guerraepisodio4.jpg",
+      "director": "George Lucas",
+      "precio": 10.50,
+      "categoria": "Ciencia Ficción",
+      "año": 1977,
+      "actores": 
+        ["Carrie Fisher","Alec Guiness"],
+      "resumen":"La nave en la que viaja la princesa Leia es capturada por las tropas imperiales al mando del temible Darth Vader. Antes de ser atrapada, Leia consigue introducir un mensaje en su robot R2-D2, quien acompañado de su inseparable C-3PO logra escapar. Tras aterrizar en el planeta Tattooine son capturados y vendidos al joven Luke Skywalker, quien descubrirá el mensaje oculto que va destinado a Obi Wan Kenobi, maestro Jedi a quien Luke debe encontrar para salvar a la princesa."
+    },
+    { 
+			"id": 5,
+			"titulo": "Star Wars: Episodio V - El Imperio contraataca",
+      "poster": "imagenes/guerraepisodio5.jpg",
+      "director": "George Lucas",
+      "precio": 5.00,
+      "categoria": "Ciencia Ficción",
+      "año": 1980,
+      "actores": 
+        ["Mark Hamill","Carrie Fisher"],
+      "resumen":"Aunque la Estrella de la Muerte ha sido destruida, las tropas imperiales han hecho salir a las fuerzas rebeldes de sus bases ocultas y los persiguen a través de la galaxia. Mientras, el grupo de rebeldes de Skywalker se esconde en un planeta helado."
+    },
+    { 
+			"id": 6,
+			"titulo": "Star Wars: Episodio VI - El retorno del Jedi",
+      "poster": "imagenes/guerraepisodio6.jpg",
+      "director": "George Lucas",
+      "precio": 18.99,
+      "categoria": "Ciencia Ficción",
+      "año": 1983,
+      "actores": 
+        ["Harrison Ford","Carrie Fisher"],
+      "resumen":"Luke Skywalker, ahora un experimentado caballero Jedi, intenta descubrir la identidad de Darth Vader."
+    },
+    { 
+			"id": 7,
+			"titulo": "El señor de los anillos: La comunidad del anillo",
+      "poster": "imagenes/comunidad.jpeg",
+      "director": "Peter Jackson",
+      "precio": 20.00,
+      "categoria": "Aventura",
+      "año": 2001,
+      "actores": 
+        ["Elijah Wood","Ian McKellen"],
+      "resumen":"Frodo Bolsón es un hobbit al que su tío Bilbo hace portador del poderoso Anillo Único, capaz de otorgar un poder ilimitado al que la posea, con la finalidad de destruirlo. Sin embargo, fuerzas malignas muy poderosas quieren arrebatárselo."
+    },
+    { 
+			"id": 8,
+			"titulo": "El señor de los anillos: Las dos torres",
+      "poster": "imagenes/2torres.jpeg",
+      "director": "Peter Jackson",
+      "precio": 15.50,
+      "categoria": "Aventura",
+      "año": 2002,
+      "actores": 
+        ["Elijah Wood","Orlando Bloom"],
+      "resumen":"Gollum guía a Frodo y Sam a Mordor mientras Aragorn y sus compañeros defienden a Rohan del bestial ejército de Saruman."
+    },
+    { 
+			"id": 9,
+			"titulo": "El señor de los anillos: el retorno del Rey",
+      "poster": "imagenes/retornorey.jpeg",
+      "director": "Peter Jackson",
+      "precio": 18.00,
+      "categoria": "Aventura",
+      "año": 2003,
+      "actores": 
+        ["Elijah Wood","Orlando Bloom"],
+      "resumen":"Frodo, Sam y Gollum se acercan al monte del Destino, donde destruirán el anillo o perecerán en el intento. Mientras, Aragorn y sus compañeros se enfrentan a las monstruosas tropas de Sauron."
+    },
+    { 
+			"id": 10,
+			"titulo": "Spider-man: Un nuevo universo",
+      "poster": "imagenes/spidey.jpeg",
+      "director": "Peter Ramsey",
+      "precio": 15.50,
+      "categoria": "Animacion",
+      "año": 2018,
+      "actores": 
+        ["Jake Johnson","Hailee Steinfeld"],
+      "resumen":"Luego de ser mordido por una araña radioactiva, el joven Miles Morales desarrolla misteriosos poderes que lo transforman en el Hombre Araña. Ahora deberá usar sus nuevas habilidades ante el malvado Kingpin, un enorme demente que puede abrir portales hacia otros universos."
+    }
+  ]
+}

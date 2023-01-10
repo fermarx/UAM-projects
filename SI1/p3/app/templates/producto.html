@@ -1,0 +1,27 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Producto
+{% endblock %}
+
+{% block content_block %}
+
+    <div>
+        <h2>Título: {{film[1]}}</h2>
+        <strong>Fecha de estreno: </strong> {{film[2]}}
+        <strong>Precio: </strong> {{film[3]}}€
+
+        {% if film.id in session['carrito'] %}
+            <form action="{{ url_for('producto', id=film[0])}}" method="post">
+                <input value="{{ session['carrito'][film[0]] }}">
+                <input type="submit" name="submit" value="Actualizar cantidad">
+            </form>
+        {% else %}
+            <form action="{{ url_for('producto', id=film[0])}}" method="post">
+                <input type="number" name="amount" min=0 value="1">
+                <input type="submit" name="submit" value="Añadir a la cesta">
+            </form>
+        {% endif %}
+    </div>
+
+{% endblock %}

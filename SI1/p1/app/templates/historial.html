@@ -1,0 +1,22 @@
+{% extends "principal.html" %}
+
+{% block title_block %}
+    Historial
+{% endblock %}
+
+{% block content_block %}
+        <h2>Historial de películas.</h2>
+        <table>
+            {% for date in history.keys() %}
+                <tbody><tr> <td> {{ date }} </td></tbody>
+                {% for dh in history[date] %}
+                <tr>
+                    <td><img src="{{ url_for('static', filename='/'~dh.poster) }}" alt="{{ dh.titulo }}" width="50" height="60"></td>
+                    <td><span>{{ dh.titulo }}</span> </td>
+                    <td><span>{{ dh.amount }} x {{ dh.price }}</span></td>
+                </tr>
+                {% endfor %}
+            {% endfor %}
+        </table>
+
+{% endblock %}
