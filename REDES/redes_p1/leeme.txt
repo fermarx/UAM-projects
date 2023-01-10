@@ -1,0 +1,26 @@
+﻿Carlos Garcia Toledano
+Sofia Xiaofan Fernandez
+
+
+Adjuntos van los archivos pcap de los ejercicios de wireshark, una captura de pantalla demostrando que se imprimen correctamente los n primeros bytes y el pdf con los ejercicios de wireshark.
+
+
+Normativa de entrega cumplida en su totalidad:Realizado. Todo entregado como se especifica
+
+
+Contar paquetes de una traza: Realizado: Se ha comprobado que el numero de paquetes enseñado por el programa es el mismo que dice wireshark ademas de que coincida cada paquete.
+
+
+Contar paquetes de la interfaz de red: Realizado: Se ha comprobado que el numero de paquetes enseñado por el programa es el mismo que dice wireshark ademas de que coincida cada paquete.
+
+
+Almacenar en una traza el tráfico capturado en vivo: Realizado: tambien se ha comprobado que la traza coincida con lo visto en wireshark. Aunque abriendo la traza con sublime text aparece, antes de los bytes de los paquetes, unos cuantos bytes desconocidos.
+
+
+Modificar fecha correctamente: Parcialmente realizado. Hemos cambiado el tiempo unix pero no cambia la hora digital.
+
+
+Imprimir los N primeros bytes de un paquete y validarlo con Wireshark (captura de pantalla): Realizado. Se imprimen solo los n primero bytes y si hay menos de n bytes solo imprime los que haya. Comprobado comparando con wireshark. (practica1captura.png adjunto)
+
+
+Cuestionario "Ejercicios de captura de tráfico": Realizado. Se ha contestado a todas las preguntas.

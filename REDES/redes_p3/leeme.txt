@@ -1,0 +1,18 @@
+Carlos García Toleadno y S. Xiao Fernández Marín
+
+CRITERIOS DE EVALUACIÓN:
+
+- Cálculo de porcentajes por protocolos: Realizado
+	
+- Obtención del top de puertos: Realizado
+
+- Obtención del top de direcciones IP: Realizado
+
+- Cálculo del caudal/throughput/tasa/ancho de banda por sentido: Realizado
+
+- Obtención de la ECDF del tamaño de paquetes: Realizado
+
+- Obtención de la ECDF de los interarrivals/intervalos de los flujos indicados por el generador de PCAP:
+	- correspondiente al flujo UDP: Realizado	
+
+	- correspondiente al flujo TCP: Realizado
